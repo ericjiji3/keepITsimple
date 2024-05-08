@@ -14,6 +14,37 @@ module.exports = {
       },
       boxShadow: {
         '3xl': '0 0px 5px 0px rgba(0, 0, 0, 0.25)',
+        'circle': '0 7px 4px 0px rgba(0, 0, 0, 0.25)',
+      },
+      colors: {
+        'blue': '#2F66F2',
+        'black': '#031926',
+        'white': '#F6F7FE'
+      },
+      borderRadius: {
+        'md': '20px',
+      },
+      fontSize: {
+        'base': ['20px', {
+          lineHeight: 'normal',
+          letterSpacing: '0',
+          fontWeight: '400',
+        }],
+        'button': ['32px', {
+          lineHeight: 'normal',
+          letterSpacing: '0',
+          fontWeight: '700',
+        }],
+        'xl': ['30px', {
+          lineHeight: 'normal',
+          letterSpacing: '0',
+          fontWeight: '700',
+        }],
+        '2xl': ['56px', {
+          lineHeight: 'normal',
+          letterSpacing: '0',
+          fontWeight: '800',
+        }]
       }
     },
   },
