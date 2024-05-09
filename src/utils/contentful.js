@@ -24,7 +24,11 @@ export const getHome = async () => {
 export const getChatbotCardsSection = async () => {
     const results = await client.getEntry('35FKukk1E1yDMwO0Uf4vVm')
     return results
-  }
+}
+export const getMicrosoftBIHomeSection = async () => {
+  const results = await client.getEntry('2JLr8bbwXEKM9LXpOZjWdd')
+  return results
+}
 
 // export const getEntryBySlug = async (slug, type) => {
 //   const queryOptions = {
