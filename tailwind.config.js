@@ -31,6 +31,11 @@ module.exports = {
           letterSpacing: '0',
           fontWeight: '400',
         }],
+        'lg': ['24px', {
+          lineHeight: 'normal',
+          letterSpacing: '0',
+          fontWeight: '700',
+        }],
         'button': ['32px', {
           lineHeight: 'normal',
           letterSpacing: '0',

@@ -5,9 +5,9 @@ export default function ChatbotCards(props){
 
     return(
         <div className="bg-blue mt-[-100px] relative z-0">
-            <div className="pt-[175px] mx-[100px]">
+            <div className="pt-[175px] mx-[100px] 2xl:mx-[350px]">
                 <h1 className="text-white text-2xl text-center mb-[100px]">{props.cardsContent.fields.heading1}</h1>
-                <div className='flex justify-center space-x-6 2xl:mx-[250px]'>
+                <div className='flex justify-center space-x-6 2xl:mx-[0px]'>
                     {props.cardsContent.fields.chatbotCard.map((card, index) => (
                         <div key={index} className='flex-1 bg-white rounded-md shadow-card'>
                             <Image className="w-full rounded-tl-md rounded-tr-md" src={'https:' + card.fields.cardImage.fields.file.url} width={card.fields.cardImage.fields.file.details.image.width} height={card.fields.cardImage.fields.file.details.image.height} alt={card.fields.cardImage.fields.file.fileName}/>
