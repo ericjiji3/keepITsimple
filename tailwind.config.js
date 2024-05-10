@@ -24,6 +24,7 @@ module.exports = {
       },
       borderRadius: {
         'md': '20px',
+        'lg': '40px'
       },
       fontSize: {
         'base': ['20px', {
