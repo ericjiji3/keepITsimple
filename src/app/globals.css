@@ -19,7 +19,12 @@ ul{
   list-style: disc;
   padding: 0 50px;
 }
-
+.carousel.carousel-slider{
+  padding-bottom: 25px;
+}
+.carousel .control-dots{
+  bottom: -15px;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
