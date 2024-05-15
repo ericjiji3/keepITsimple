@@ -19,7 +19,7 @@ export default function Home(props){
     }, [])
     return(
         <div className="relative z-10 mt-[75px]">
-            <div className="max-w-[1200px] mx-auto flex items-center">
+            <div className="max-w-[1200px] xl:max-w-[1100px] mx-auto flex items-center">
                 <div className="flex-[70%] mr-[80px]">
                     {/* <h1>
                         Discover How Automation can Revolutionize Your Business

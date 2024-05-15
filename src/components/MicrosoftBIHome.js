@@ -18,7 +18,7 @@ export default function MicrosoftBIHome(props){
     }, [])
     return(
         <div className="bg-white">
-            <div className='max-w-[1200px] mx-auto'>
+            <div className='max-w-[1200px] xl:max-w-[1100px] mx-auto'>
                 <div className="mt-[25px]" dangerouslySetInnerHTML={{ __html: heading }} />
                 <div className='relative py-[350px]'>
                     <Image className="w-[600px] h-auto absolute bottom-[50%] translate-y-1/2 left-[25%] rounded-[10px] shadow-card" src={"https:" + props.microBIContent.fields.image1.fields.file.url} width={props.microBIContent.fields.image1.fields.file.details.image.width} height={props.microBIContent.fields.image1.fields.file.details.image.height} alt={props.microBIContent.fields.image1.fields.file.fileName}/>

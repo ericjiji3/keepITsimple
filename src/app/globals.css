@@ -23,7 +23,7 @@ ul{
   padding-bottom: 25px;
 }
 .carousel .control-dots{
-  bottom: -15px;
+  bottom: -15px!important;
 }
 @layer utilities {
   .text-balance {

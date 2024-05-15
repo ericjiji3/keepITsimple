@@ -25,7 +25,7 @@ export default function Accordian(props){
     }
     console.log('ACCORDIAN', accRef);
     return(
-        <div className="max-w-[1200px] mx-auto flex bg-black rounded-lg px-[25px] py-[50px]">
+        <div className="max-w-[1200px] xl:max-w-[1100px] mx-auto flex bg-black rounded-lg px-[25px] py-[50px]">
             <div className="flex-[40%] text-white text-xl mr-[50px]">
                 {props.accContent.fields.accordianBlock.map((acc, index) => (
                     <div key={index} className="border-b-2 border-white pb-[20px] mb-[20px]">

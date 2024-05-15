@@ -5,7 +5,9 @@ import ChatbotCards from "@/components/ChatbotCards";
 import MicrosoftBIHome from "@/components/MicrosoftBIHome";
 import Accordian from "@/components/Accordian";
 import MicrosoftBIVideos from "@/components/MicrosoftBIVideos";
-import { getHome, getChatbotCardsSection, getMicrosoftBIHomeSection, getAccordianSection, getVideoSection } from "@/utils/contentful";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import { getHome, getChatbotCardsSection, getMicrosoftBIHomeSection, getAccordianSection, getVideoSection, getContactSection } from "@/utils/contentful";
 
 export default async function App() {
   const home = await getHome();
@@ -13,6 +15,7 @@ export default async function App() {
   const microsoftBIHome = await getMicrosoftBIHomeSection();
   const accordianData = await getAccordianSection();
   const videoData = await getVideoSection();
+  const contactData = await getContactSection();
 
   return (
     <main className="bg-white">
@@ -21,11 +24,12 @@ export default async function App() {
         <Home homeContent={home}/>
         <ChatbotCards cardsContent={cards}/>
         <MicrosoftBIHome microBIContent={microsoftBIHome}/>
-        <div className="bg-blue pt-[100px]">
+        <div className="bg-blue py-[100px]">
           <Accordian accContent={accordianData}/>
           <MicrosoftBIVideos vidsContent={videoData}/>
         </div>
-        
+        <Contact contContent={contactData}/>
+        <Footer/>
       </div>
       
     </main>

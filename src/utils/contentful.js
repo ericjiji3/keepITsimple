@@ -39,8 +39,12 @@ export const getAccordianSection = async () => {
 export const getVideoSection = async () => {
     const results = await client.getEntry('5cdew85kmcZ0jRzesiFREU')
     return results
-  }
+}
   
+export const getContactSection = async () => {
+    const results = await client.getEntry('19eHdSKKAIxTqmxUVASXsB')
+    return results
+}
 
 // export const getEntryBySlug = async (slug, type) => {
 //   const queryOptions = {
