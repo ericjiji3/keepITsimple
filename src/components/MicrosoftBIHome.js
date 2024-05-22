@@ -17,7 +17,7 @@ export default function MicrosoftBIHome(props){
         // setSubheading(subhead);
     }, [])
     return(
-        <div className="bg-white">
+        <div className="bg-white" id="powerbi">
             <div className='max-w-[1200px] xl:max-w-[1100px] mx-auto'>
                 <div className="mt-[25px]" dangerouslySetInnerHTML={{ __html: heading }} />
                 <div className='relative py-[350px]'>

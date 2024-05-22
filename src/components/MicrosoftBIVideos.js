@@ -10,7 +10,7 @@ export default function MicrosoftBIVideos(props){
 
     return(
         // className="max-w-[1200px] mx-auto flex bg-black rounded-lg px-[25px] py-[50px] mt-[50px]"
-        <div className="max-w-[1200px] mx-auto flex bg-black rounded-lg px-[25px] pt-[25px] mt-[50px]">
+        <div className="max-w-[1200px] xl:max-w-[1100px] mx-auto flex bg-black rounded-lg px-[25px] pt-[25px] mt-[50px]">
             <Carousel swipable={true} emulateTouch={true} showArrows={false} showStatus={false}>
             {props.vidsContent.fields.videoBlock.map((video, index) => (
                 

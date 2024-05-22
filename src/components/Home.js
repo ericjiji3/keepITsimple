@@ -18,7 +18,7 @@ export default function Home(props){
         setSubheading(subhead);
     }, [])
     return(
-        <div className="relative z-10 mt-[75px]">
+        <div className="relative z-10 mt-[75px]" id="chatbot">
             <div className="max-w-[1200px] xl:max-w-[1100px] mx-auto flex items-center">
                 <div className="flex-[70%] mr-[80px]">
                     {/* <h1>
@@ -37,7 +37,7 @@ export default function Home(props){
                     ))} */}
                     <div className="mb-[25px]" dangerouslySetInnerHTML={{ __html: heading }} />
                     <div className="mb-[20px]" dangerouslySetInnerHTML={{ __html: subheading }} /> 
-                    <a className="inline-block rounded-md font-bold bg-blue text-white px-[50px] py-[20px]">
+                    <a className="inline-block rounded-md font-bold text-md bg-blue text-white px-[50px] py-[20px]">
                         Book a free demo
                     </a>
                     

@@ -23,9 +23,11 @@ module.exports = {
       colors: {
         'blue': '#2F66F2',
         'black': '#031926',
-        'white': '#F6F7FE'
+        'white': '#F6F7FE',
+        'blackish': '#27262B'
       },
       borderRadius: {
+        'sm' : '10px',
         'md': '20px',
         'lg': '40px'
       },

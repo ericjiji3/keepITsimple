@@ -11,9 +11,13 @@
     --background-color: #F6F7FE;
   }
 }
-
+html{
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
+}
 body {
   background: var(--background-color);
+
 }
 ul{
   list-style: disc;
