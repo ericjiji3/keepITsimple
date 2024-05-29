@@ -47,6 +47,11 @@ module.exports = {
           letterSpacing: '0',
           fontWeight: '700',
         }],
+        'mobilebutton': ['15px', {
+          lineHeight: 'normal',
+          letterSpacing: '0',
+          fontWeight: '700',
+        }],
         'xl': ['30px', {
           lineHeight: 'normal',
           letterSpacing: '0',
@@ -56,7 +61,52 @@ module.exports = {
           lineHeight: 'normal',
           letterSpacing: '0',
           fontWeight: '800',
-        }]
+        }],
+        'mobile2xl': ['22px', {
+          lineHeight: 'normal',
+          letterSpacing: '0',
+          fontWeight: '800',
+        }],
+        'mobilexl': ['12px', {
+          lineHeight: 'normal',
+          letterSpacing: '0',
+          fontWeight: '800',
+        }],
+        'mobilebase': ['12px', {
+          lineHeight: 'normal',
+          letterSpacing: '0',
+          fontWeight: '500',
+        }],
+      },
+      keyframes: {
+        floating: {
+          '0%': { transform: 'translate(0,0)' },
+          '25%': { transform: 'translate(-20px,15px)' },
+          '50%': { transform: 'translate(0,-0)' },
+          '75%': { transform: 'translate(15px,-20px)' },
+          '100%': { transform: 'translate(-0,0)' }
+        },
+        floating2: {
+
+          '0%': { transform: 'translate(0,0)' },
+          '25%': { transform: 'translate(-20px,0px)' },
+          '50%': { transform: 'translate(0,-0)' },
+          '75%': { transform: 'translate(20px,0px)' },
+          '100%': { transform: 'translate(-0,0)' }
+        },
+        floating3: {
+
+          '0%': { transform: 'translate(0,0)' },
+          '25%': { transform: 'translate(-50px,50px)' },
+          '50%': { transform: 'translate(0,0)' },
+          '75%': { transform: 'translate(50px,-50px)' },
+          '100%': { transform: 'translate(-0,0)' }
+        },
+      },
+      animation: {
+        floating: 'floating 10s linear infinite',
+        floating2: 'floating2 5s linear infinite',
+        floating3: 'floating3 5s linear infinite',
       }
     },
   },

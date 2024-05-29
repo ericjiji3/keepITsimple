@@ -9,18 +9,18 @@ export default function Home(props){
     const [subheading, setSubheading] = useState(null);
 
     useEffect(()=>{
-        var head = "<h1 class='text-black text-2xl'>" + props.homeContent.fields.heading.replace(props.homeContent.fields.highlightedText, `<span class="text-blue">${props.homeContent.fields.highlightedText}</span>`) + "</h1>";
+        var head = "<h1 class='text-black lg:text-2xl text-mobile2xl'>" + props.homeContent.fields.heading.replace(props.homeContent.fields.highlightedText, `<span class="text-blue">${props.homeContent.fields.highlightedText}</span>`) + "</h1>";
         console.log(head);
         setHeading(head);
 
-        var subhead = "<h2 class='text-black text-xl'>" + props.homeContent.fields.subheading.replace(props.homeContent.fields.highlightedSubheadingText, `<span class="text-blue">${props.homeContent.fields.highlightedSubheadingText}</span>`) + "</h2>";
+        var subhead = "<h2 class='text-black lg:text-xl text-mobilexl'>" + props.homeContent.fields.subheading.replace(props.homeContent.fields.highlightedSubheadingText, `<span class="text-blue">${props.homeContent.fields.highlightedSubheadingText}</span>`) + "</h2>";
         console.log(subhead);
         setSubheading(subhead);
     }, [])
     return(
         <div className="relative z-10 mt-[75px]" id="chatbot">
-            <div className="max-w-[1200px] xl:max-w-[1100px] mx-auto flex items-center">
-                <div className="flex-[70%] mr-[80px]">
+            <div className="max-w-[1200px] px-[25px] xl:max-w-[1100px] mx-auto flex md:flex-row flex-col items-center">
+                <div className="flex-1 md:flex-[70%] mr-0 md:mr-[80px] md:mb-0 mb-[50px]">
                     {/* <h1>
                         Discover How Automation can Revolutionize Your Business
                     </h1>
@@ -37,12 +37,12 @@ export default function Home(props){
                     ))} */}
                     <div className="mb-[25px]" dangerouslySetInnerHTML={{ __html: heading }} />
                     <div className="mb-[20px]" dangerouslySetInnerHTML={{ __html: subheading }} /> 
-                    <a className="inline-block rounded-md font-bold text-md bg-blue text-white px-[50px] py-[20px]">
+                    <a className="inline-block rounded-md font-bold mobile-text-md md:text-md bg-blue text-white px-[50px] py-[20px]">
                         Book a free demo
                     </a>
                     
                 </div>
-                <div className="flex-[30%]">
+                <div className="flex-1 md:flex-[30%]">
                     <Script src="https://cdn.voiceflow.com/widget/bundle.mjs" strategy="afterInteractive" onLoad={() => { 
                         window.voiceflow.chat.load({
                         verify: { projectID: '66397bfa9602254be842ef38' },

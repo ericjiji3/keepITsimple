@@ -23,17 +23,17 @@ export default function Accordian(props){
             setInd(index);
         }
     }
-    console.log('ACCORDIAN', accRef);
+   
     return(
-        <div className="max-w-[1200px] xl:max-w-[1100px] mx-auto flex bg-black rounded-lg px-[25px] py-[50px]">
-            <div className="flex-[40%] text-white text-xl mr-[50px]">
+        <div className="max-w-[1200px] xl:max-w-[1100px] mx-auto flex md:flex-row flex-col bg-black rounded-lg px-[25px] md:py-[50px] pt-[50px]">
+            <div className="flex-[40%] text-white text-xl mr-0 md:mr-[50px]">
                 {props.accContent.fields.accordianBlock.map((acc, index) => (
                     <div key={index} className="border-b-2 border-white pb-[20px] mb-[20px]">
-                        <div className="flex justify-between" onClick={() => {setInd(index)}}>
+                        <div className="flex justify-between hover:cursor-pointer" onClick={() => {setInd(index)}}>
                             <h3>
                                 {acc.fields.tabHeading}
                             </h3>
-                            <Image className="self-center" src={Arrow} width={35} height={35} alt="arrow"/>
+                            <Image className={ind == index ? "self-center rotate-[180deg] transition-all duration-500" : "self-center transition-all duration-500"} src={Arrow} width={35} height={35} alt="arrow"/>
                         </div>
                         <div className={ind == index ? `max-h-[20em] overflow-hidden transition-[max-height] ease-in-out duration-500` : `max-h-0 overflow-hidden transition-[max-height] ease-in-out duration-500`}>
                             <h3 className="mt-[5px]">

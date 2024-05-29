@@ -22,11 +22,11 @@ export default async function App() {
       <div >
         <Header/>
         <Home homeContent={home}/>
-        <ChatbotCards cardsContent={cards}/>
+        <ChatbotCards cardsContent={videoData}/>
         <MicrosoftBIHome microBIContent={microsoftBIHome}/>
         <div className="bg-blue py-[100px]">
           <Accordian accContent={accordianData}/>
-          <MicrosoftBIVideos vidsContent={videoData}/>
+          {/* <MicrosoftBIVideos vidsContent={videoData}/> */}
         </div>
         <Contact contContent={contactData}/>
         <Footer/>
