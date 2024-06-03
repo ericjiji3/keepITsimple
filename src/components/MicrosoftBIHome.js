@@ -8,7 +8,20 @@ export default function MicrosoftBIHome(props){
     // console.log(props.microBIContent.fields.image1.fields.file.details.image);
     const [heading, setHeading] = useState(null);
     const [subheading, setSubheading] = useState(null);
+    const [width, setWidth] = useState(0);
 
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, [])
+
+    useEffect(() => {
+        const resize = () => {
+            setWidth(window.innerWidth);
+        };
+        document.addEventListener("resize", resize);
+        () => document.removeEventListener("resize", resize);
+    }, [width])
+    
     useEffect(()=>{
         var head = "<h1 class='text-mobile2xl md:text-2xl text-black text-center'>" + props.microBIContent.fields.heading.replace(props.microBIContent.fields.highlightedHeading1Text, `<span class="text-blue">${props.microBIContent.fields.highlightedHeading1Text}</span>`) + "</h1>";
         setHeading(head);
@@ -29,7 +42,7 @@ export default function MicrosoftBIHome(props){
                 <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{margin: '-400px'}}
+            viewport={{margin: (width <= 1500 ? '0px' :'-400px')}}
             transition={{
                 type: "ease-in",
                 duration: 0.5

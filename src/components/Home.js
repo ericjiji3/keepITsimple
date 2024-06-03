@@ -7,7 +7,20 @@ import { motion } from "framer-motion";
 export default function Home(props){
     const [heading, setHeading] = useState(null);
     const [subheading, setSubheading] = useState(null);
+    const [width, setWidth] = useState(0);
 
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, [])
+
+    useEffect(() => {
+        const resize = () => {
+            setWidth(window.innerWidth);
+        };
+        document.addEventListener("resize", resize);
+        () => document.removeEventListener("resize", resize);
+    }, [width])
+    
     useEffect(()=>{
         var head = "<h1 class='text-black lg:text-2xl text-mobile2xl'>" + props.homeContent.fields.heading.replace(props.homeContent.fields.highlightedText, `<span class="text-blue">${props.homeContent.fields.highlightedText}</span>`) + "</h1>";
         console.log(head);

@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -8,13 +8,26 @@ import { motion } from "framer-motion";
 
 export default function MicrosoftBIVideos(props){
     console.log('ehrajenlrk', props.vidsContent.fields.videoBlock[0].fields.media.fields.file.details);
+    const [width, setWidth] = useState(0);
 
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, [])
+
+    useEffect(() => {
+        const resize = () => {
+            setWidth(window.innerWidth);
+        };
+        document.addEventListener("resize", resize);
+        () => document.removeEventListener("resize", resize);
+    }, [width])
+    
     return(
         // className="max-w-[1200px] mx-auto flex bg-black rounded-lg px-[25px] py-[50px] mt-[50px]"
         <motion.div
             initial={{ opacity: 0, translateY: -200 }}
             whileInView={{ opacity: 1, translateY: 0 }}
-            viewport={{margin: '-300px'}}
+            viewport={{margin: (width <= 1500 ? '0px' :'-300px')}}
             transition={{
                 type: "ease-in",
                 duration: 0.5

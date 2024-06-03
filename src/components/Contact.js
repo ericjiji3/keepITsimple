@@ -7,7 +7,20 @@ import { motion } from "framer-motion";
 export default function Contact(props){
     const [heading, setHeading] = useState(null);
     const [subheading, setSubheading] = useState(null);
+    const [width, setWidth] = useState(0);
 
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, [])
+
+    useEffect(() => {
+        const resize = () => {
+            setWidth(window.innerWidth);
+        };
+        document.addEventListener("resize", resize);
+        () => document.removeEventListener("resize", resize);
+    }, [width])
+    
     useEffect(()=>{
         var head = "<h1 class='text-black text-mobile2xl lg:text-2xl'>" + props.contContent.fields.heading.replace(props.contContent.fields.highlightedText, `<span class="text-blue">${props.contContent.fields.highlightedText}</span>`) + "</h1>";
         console.log(head);
@@ -26,7 +39,7 @@ export default function Contact(props){
                     <motion.div
             initial={{ opacity: 0, translateY: -200 }}
             whileInView={{ opacity: 1, translateY: 0 }}
-            viewport={{margin: '-300px'}}
+            viewport={{margin: (width <= 1500 ? '0px' :'-300px')}}
             transition={{
                 type: "ease-in",
                 duration: 0.5
