@@ -8,7 +8,20 @@ import { motion } from "framer-motion";
 export default function Accordian(props){
     const [accRef, setAccRef] = useState({});
     const [ind, setInd] = useState(0);
+    const [width, setWidth] = useState(0);
 
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, [])
+
+    useEffect(() => {
+        const resize = () => {
+            setWidth(window.innerWidth);
+        };
+        document.addEventListener("resize", resize);
+        () => document.removeEventListener("resize", resize);
+    }, [width])
+    
     useEffect(()=>{
         const newDict = props.accContent.fields.accordianBlock.map((acc, index) => (
 
@@ -29,7 +42,7 @@ export default function Accordian(props){
         <motion.div
             initial={{ opacity: 0, translateX: -200 }}
             whileInView={{ opacity: 1, translateX: 0 }}
-            viewport={{margin: '-300px'}}
+            viewport={{margin: (width <= 1500 ? '0px' : '-300px')}}
             transition={{
                 type: "ease-in",
                 duration: 0.5
