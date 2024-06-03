@@ -2,9 +2,10 @@
 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 
 export default function MicrosoftBIHome(props){
-    console.log(props.microBIContent.fields.image1.fields.file.details.image);
+    // console.log(props.microBIContent.fields.image1.fields.file.details.image);
     const [heading, setHeading] = useState(null);
     const [subheading, setSubheading] = useState(null);
 
@@ -18,14 +19,27 @@ export default function MicrosoftBIHome(props){
     }, [])
     return(
         <div className="bg-white" id="powerbi">
-            <div className='max-w-[1200px] xl:max-w-[1100px] mx-auto'>
+            <div className='max-w-[350px] md:max-w-[1200px] xl:max-w-[1100px] mx-auto'>
                 <div className="mt-[25px]" dangerouslySetInnerHTML={{ __html: heading }} />
-                <div className='relative py-[350px]'>
-                    <Image className="animate-floating w-[600px] h-auto absolute bottom-[50%] translate-y-1/2 left-[25%] rounded-[10px] shadow-card" src={"https:" + props.microBIContent.fields.image1.fields.file.url} width={props.microBIContent.fields.image1.fields.file.details.image.width} height={props.microBIContent.fields.image1.fields.file.details.image.height} alt={props.microBIContent.fields.image1.fields.file.fileName}/>
-                    <Image className="animate-floating3 w-[350px] h-auto absolute bottom-[5%] left-[45%] rounded-[10px] shadow-card" src={"https:" + props.microBIContent.fields.image2.fields.file.url} width={props.microBIContent.fields.image2.fields.file.details.image.width} height={props.microBIContent.fields.image2.fields.file.details.image.height} alt={props.microBIContent.fields.image2.fields.file.fileName}/>
-                    <Image className="animate-floating2 w-[400px] h-auto absolute top-[5%] left-[55%] rounded-[10px] shadow-card" src={"https:" + props.microBIContent.fields.image3.fields.file.url} width={props.microBIContent.fields.image3.fields.file.details.image.width} height={props.microBIContent.fields.image3.fields.file.details.image.height} alt={props.microBIContent.fields.image3.fields.file.fileName}/>
+                {/* <div className='relative py-[200px] lg:py-[350px]'>
+                    <Image className="animate-floating w-[400px] lg:w-[600px] h-auto absolute bottom-[25%] lg:bottom-[30%] translate-y-1/2 left-[0] lg:left-[15%] rounded-[10px] shadow-card" src={"https:" + props.microBIContent.fields.image1.fields.file.url} width={props.microBIContent.fields.image1.fields.file.details.image.width} height={props.microBIContent.fields.image1.fields.file.details.image.height} alt={props.microBIContent.fields.image1.fields.file.fileName}/>
+                    <Image className="animate-floating3 w-[150px] lg:w-[350px] h-auto absolute bottom-[20%] lg:bottom-[25%] left-[45%] rounded-[10px] shadow-card" src={"https:" + props.microBIContent.fields.image2.fields.file.url} width={props.microBIContent.fields.image2.fields.file.details.image.width} height={props.microBIContent.fields.image2.fields.file.details.image.height} alt={props.microBIContent.fields.image2.fields.file.fileName}/>
+                    <Image className="animate-floating2 w-[200px] lg:w-[400px] h-auto absolute top-[15%] lg:top-[5%] left-[0%] lg:left-[55%] rounded-[10px] shadow-card" src={"https:" + props.microBIContent.fields.image3.fields.file.url} width={props.microBIContent.fields.image3.fields.file.details.image.width} height={props.microBIContent.fields.image3.fields.file.details.image.height} alt={props.microBIContent.fields.image3.fields.file.fileName}/>
+                </div> */}
+                <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{margin: '-400px'}}
+            transition={{
+                type: "ease-in",
+                duration: 0.5
+            }}
+            >
+                <div>
+                <iframe title="Sales Report Draft" className='w-full mt-[25px]' width={1140} height={541.25} src="https://app.powerbi.com/reportEmbed?reportId=0a05977f-d9a5-446f-b69a-75f8063235b0&autoAuth=true&ctid=0859cc3b-5093-4056-821f-3e363f0f95fc" frameborder="0" allowFullScreen="true"></iframe>
                 </div>
-                <h1 className='mt-[25px] text-mobilexl md:text-xl text-black text-center mb-[100px]'>{props.microBIContent.fields.heading2}</h1>
+                </motion.div>
+                <h1 className='mt-[25px] text-mobilexl md:text-xl text-black text-center mb-[25px] lg:mb-[100px]'>{props.microBIContent.fields.heading2}</h1>
             </div>
         </div>
     )

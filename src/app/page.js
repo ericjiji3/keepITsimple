@@ -24,7 +24,7 @@ export default async function App() {
         <Home homeContent={home}/>
         <ChatbotCards cardsContent={videoData}/>
         <MicrosoftBIHome microBIContent={microsoftBIHome}/>
-        <div className="bg-blue py-[100px]">
+        <div className="bg-blue py-[50px] lg:py-[100px]">
           <Accordian accContent={accordianData}/>
           {/* <MicrosoftBIVideos vidsContent={videoData}/> */}
         </div>

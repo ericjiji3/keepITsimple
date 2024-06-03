@@ -9,7 +9,7 @@ import { getVideoSection } from "@/utils/contentful";
 export default function ChatbotCards(props){
     return(
         <div className="bg-blue mt-[-100px] relative z-0">
-            <div className="max-w-[1200px] xl:max-w-[1100px] mx-auto pt-[150px] pb-[100px]">
+            <div className="max-w-[350px] md:max-w-[1200px] xl:max-w-[1100px] mx-auto pt-[100px] md:pt-[150px] pb-[50px] md:pb-[100px]">
                 {/* <h1 className="text-white text-2xl text-center mb-[100px]">{props.cardsContent.fields.heading1}</h1> */}
                 <div className='flex justify-center space-x-6 2xl:mx-[0px]'>
                     {/* {props.cardsContent.fields.chatbotCard.map((card, index) => (
