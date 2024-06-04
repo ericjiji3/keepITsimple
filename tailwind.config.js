@@ -32,6 +32,11 @@ module.exports = {
         'lg': '40px'
       },
       fontSize: {
+        'fine': ['16px', {
+          lineHeight: 'normal',
+          letterSpacing: '0',
+          fontWeight: '400',
+        }],
         'base': ['20px', {
           lineHeight: 'normal',
           letterSpacing: '0',
@@ -79,6 +84,10 @@ module.exports = {
         }],
       },
       keyframes: {
+        fadein: {
+          '0%' : {opacity: 0},
+          '100%' : {opacity: 1}
+        },
         floating: {
           '0%': { transform: 'translate(0,0)' },
           '25%': { transform: 'translate(-25px,0px)' },
@@ -107,6 +116,7 @@ module.exports = {
         floating: 'floating 10s linear infinite',
         floating2: 'floating2 7s linear infinite',
         floating3: 'floating3 6s linear infinite',
+        fadein: 'fadein 2s ease-in forwards'
       }
     },
   },

@@ -51,18 +51,18 @@ export default function Accordian(props){
         <div className="max-w-[400px] md:max-w-[1200px] xl:max-w-[1100px] mx-auto flex md:flex-row flex-col bg-black rounded-lg px-[25px] md:py-[50px] pt-[50px]">
             <div className="flex-1 md:flex-[40%] text-white text-mobilexl lg:text-xl mr-0 md:mr-[50px]">
                 {props.accContent.fields.accordianBlock.map((acc, index) => (
-                    <div key={index} className="border-b-2 border-white pb-[20px] mb-[20px]">
+                    <div key={index} className={ind == index ? "border-b-2 border-blue pb-[20px] transition-all duration-500 mb-[20px]" : "border-b-2 border-white pb-[20px] transition-all duration-500 mb-[20px]"}>
                         <div className="flex justify-between hover:cursor-pointer" onClick={() => {setInd(index)}}>
-                            <h3>
+                            <h3 className={ind == index ? "text-blue transition-all duration-500" : "text-white transition-all duration-500"}>
                                 {acc.fields.tabHeading}
                             </h3>
                             <Image className={ind == index ? "self-center rotate-[180deg] transition-all duration-500 lg:w-auto w-[20px]" : "self-center transition-all duration-500 lg:w-auto w-[20px]"} src={Arrow} width={35} height={35} alt="arrow"/>
                         </div>
-                        <div className={ind == index ? `max-h-[20em] overflow-hidden transition-[max-height] ease-in-out duration-500` : `max-h-0 overflow-hidden transition-[max-height] ease-in-out duration-500`}>
+                        {/* <div className={ind == index ? `max-h-[20em] overflow-hidden transition-[max-height] ease-in-out duration-500` : `max-h-0 overflow-hidden transition-[max-height] ease-in-out duration-500`}>
                             <h3 className="mt-[5px]">
                                 {acc.fields.tabDropdownText}
                             </h3>
-                        </div>
+                        </div> */}
                     </div>
                 ))}
             </div>
