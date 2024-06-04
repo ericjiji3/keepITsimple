@@ -27,7 +27,7 @@ export default function MicrosoftBIVideos(props){
         <motion.div
             initial={{ opacity: 0, translateY: -200 }}
             whileInView={{ opacity: 1, translateY: 0 }}
-            viewport={{margin: (width <= 768 ? '-300px' : width <= 1024 ? '-400px' : width <= 1280 ? '-140px' : '-500px')}}
+            viewport={{margin: (width <= 768 ? '-300px' : width <= 1024 ? '-400px' : width <= 1280 ? '0px -500px' : '-500px')}}
             transition={{
                 type: "ease-in",
                 duration: 0.5
