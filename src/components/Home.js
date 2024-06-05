@@ -102,7 +102,7 @@ export default function Home(props){
                 </motion.div>
             </div>
             
-            <div class="h-[150px] w-full bg-white shadow-circle rounded-bl-[100%] rounded-br-[100%]"></div>
+            <div class="h-[80px] md:h-[150px] w-full bg-white shadow-circle rounded-bl-[100%] rounded-br-[100%]"></div>
         </div>
     )
 }

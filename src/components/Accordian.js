@@ -50,7 +50,7 @@ export default function Accordian(props){
                 duration: 0.5
             }}
             >
-        <div className="max-w-[400px] md:max-w-[1200px] xl:max-w-[1100px] mx-auto flex md:flex-row flex-col bg-black rounded-lg mx-[10px] px-[20px] md:py-[50px] pt-[50px]">
+        <div className="max-w-[400px] md:max-w-[1200px] xl:max-w-[1100px] flex md:flex-row flex-col bg-black rounded-lg mx-[25px] px-[20px] md:py-[50px] pt-[50px]">
             <div className="flex-1 md:flex-[40%] text-white text-mobilexl lg:text-xl mr-0 md:mr-[50px]">
                 {props.accContent.fields.accordianBlock.map((acc, index) => (
                     <div key={index} className={ind == index ? "border-b-2 border-blue pb-[20px] transition-all duration-500 mb-[20px]" : "border-b-2 border-white pb-[20px] transition-all duration-500 mb-[20px]"}>

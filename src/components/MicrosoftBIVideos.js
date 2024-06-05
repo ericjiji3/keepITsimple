@@ -40,9 +40,9 @@ export default function MicrosoftBIVideos(props){
                 
                 <div key={index} className="text-left px-[10px]">
                     {video.fields.media.fields.file.details.hasOwnProperty('image') ? 
-                        <Image className="w-full h-auto mb-[25px] rounded-md w-full" src={'https:' + video.fields.media.fields.file.url} width={video.fields.media.fields.file.details.image.width} height={video.fields.media.fields.file.details.image.height}/>
+                        <Image className="w-full h-auto mb-[15px] rounded-md w-full" src={'https:' + video.fields.media.fields.file.url} width={video.fields.media.fields.file.details.image.width} height={video.fields.media.fields.file.details.image.height}/>
                         :
-                        <video controls className={`mb-[25px] rounded-md w-full`} src={"https:" + video.fields.media.fields.file.url} alt={video.fields.media.fields.file.fileName}/>
+                        <video controls className={`mb-[15px] rounded-md w-full`} src={"https:" + video.fields.media.fields.file.url} alt={video.fields.media.fields.file.fileName}/>
                     }
                     
                     <h3 className="text-white text-mobile2xl lg:text-xl mb-[10px]">{video.fields.heading}</h3>
