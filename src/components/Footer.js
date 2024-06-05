@@ -13,9 +13,9 @@ export default function Footer(){
                     <span className="text-white text-xs ml-[10px]">©2024 KeepITSimple - All rights reserved.</span>
                 </div>
                 <div className="flex self-center">
-                    <Image className="w-[15px] lg:w-full" src={Facebook} width={20} height={20} alt="logo"/>
-                    <Image className="mx-[5px] w-[15px] lg:w-full" src={Ig} width={20} height={20} alt="logo"/>
-                    <Image className="w-[15px] lg:w-full" src={Twitter} width={20} height={20} alt="logo"/>
+                    <Image className="w-[15px] lg:w-[20px]" src={Facebook} width={20} height={20} alt="logo"/>
+                    <Image className="mx-[5px] w-[15px] lg:w-[20px]" src={Ig} width={20} height={20} alt="logo"/>
+                    <Image className="w-[15px] lg:w-[20px]" src={Twitter} width={20} height={20} alt="logo"/>
                 </div>
             </div>
         </div>
