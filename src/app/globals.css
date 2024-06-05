@@ -17,7 +17,6 @@ html{
 }
 body {
   background: var(--background-color);
-
 }
 ul{
   list-style: disc;
@@ -32,6 +31,22 @@ ul{
 .carousel .thumbs-wrapper{
   margin: 10px!important;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #27262B;
+  border-radius: 10px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

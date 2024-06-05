@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Logo from '../../public/logo.png';
-import Facebook from '../../public/fb-icon.png';
-import Ig from '../../public/insta-icon.png';
-import Twitter from '../../public/twitter-icon.png';
+import Facebook from '../../public/linkedin-icon.png';
+import Ig from '../../public/yt-icon.png';
+import Twitter from '../../public/yt-icon.png';
 
 export default function Footer(){
     return(
@@ -13,9 +13,8 @@ export default function Footer(){
                     <span className="text-white text-xs ml-[10px]">©2024 KeepITSimple - All rights reserved.</span>
                 </div>
                 <div className="flex self-center">
-                    <Image className="w-[15px] lg:w-[20px]" src={Facebook} width={20} height={20} alt="logo"/>
-                    <Image className="mx-[5px] w-[15px] lg:w-[20px]" src={Ig} width={20} height={20} alt="logo"/>
-                    <Image className="w-[15px] lg:w-[20px]" src={Twitter} width={20} height={20} alt="logo"/>
+                    <a href="https://www.linkedin.com/company/kis-hq/" target="__blank"><Image className="w-[15px] mr-[5px] lg:w-[20px]" src={Facebook} width={20} height={20} alt="logo"/></a>
+                    <a href="https://www.youtube.com/@BlakeEdwardsPBI" target="__blank"><Image className="w-[15px] lg:w-[20px]" src={Ig} width={20} height={20} alt="logo"/></a>
                 </div>
             </div>
         </div>
