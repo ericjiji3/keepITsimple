@@ -3,6 +3,10 @@
 import Script from 'next/script';
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
+import Image from 'next/image';
+import Hero1 from '../../public/hero1.gif';
+import Hero2 from '../../public/hero2.gif';
+import Hero3 from '../../public/hero3.gif';
 
 export default function Home(props){
     const [heading, setHeading] = useState(null);
@@ -40,8 +44,9 @@ export default function Home(props){
                 type: "ease-in",
                 duration: 0.5
             }}
+            className="flex-1 md:flex-[65%] mr-0 md:mr-[50px] md:mb-0 mb-[50px]"
             >
-                <div className="flex-1 md:flex-[70%] mr-0 md:mr-[80px] md:mb-0 mb-[50px]">
+                <div>
                     {/* <h1>
                         Discover How Automation can Revolutionize Your Business
                     </h1>
@@ -71,9 +76,10 @@ export default function Home(props){
                 type: "ease-in",
                 duration: 0.5
             }}
+            className="none md:block flex-1 md:flex-[35%]"
             >
-                <div className="flex-1 md:flex-[30%]">
-                    <Script src="https://cdn.voiceflow.com/widget/bundle.mjs" strategy="afterInteractive" onLoad={() => { 
+                <div>
+                    {/* <Script src="https://cdn.voiceflow.com/widget/bundle.mjs" strategy="afterInteractive" onLoad={() => { 
                         window.voiceflow.chat.load({
                         verify: { projectID: '66397bfa9602254be842ef38' },
                         url: 'https://general-runtime.voiceflow.com',
@@ -85,7 +91,13 @@ export default function Home(props){
                         autostart: false
                     })
                     }} />
-                    <div id="flat-chat"></div>    
+                    <div id="flat-chat"></div>     */}
+                    <div className='relative'>
+                        <Image className='w-full z-[2] absolute top-[50%] translate-y-[-50%] rounded-sm' src={Hero1}/>
+                        <Image className='w-[85%] z-[1] absolute right-[-20%] top-[50%] translate-y-[40%] rounded-sm' src={Hero2}/>
+                        <Image className='w-[65%] z-[1] absolute right-[30%] top-[-210px] rounded-sm' src={Hero3}/>
+                    </div>
+
                 </div>
                 </motion.div>
             </div>

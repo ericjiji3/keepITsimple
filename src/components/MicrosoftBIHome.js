@@ -26,7 +26,7 @@ export default function MicrosoftBIHome(props){
         var head = "<h1 class='text-mobile2xl md:text-2xl text-black text-center'>" + props.microBIContent.fields.heading.replace(props.microBIContent.fields.highlightedHeading1Text, `<span class="text-blue">${props.microBIContent.fields.highlightedHeading1Text}</span>`) + "</h1>";
         setHeading(head);
 
-        var subhead = "<h2 class='text-black text-mobilexl md:text-xl text-black text-center mb-[25px] lg:mb-[100px]'>" + props.microBIContent.fields.heading2.replace(props.microBIContent.fields.highlightedHeading2Text, `<span class="text-blue">${props.microBIContent.fields.highlightedHeading2Text}</span>`) + "</h2>";
+        var subhead = "<h2 class='text-black text-mobilexl md:text-xl text-black text-center mb-[25px] lg:mb-[50px]'>" + props.microBIContent.fields.heading2.replace(props.microBIContent.fields.highlightedHeading2Text, `<span class="text-blue">${props.microBIContent.fields.highlightedHeading2Text}</span>`) + "</h2>";
         console.log(subhead);
         setSubheading(subhead);
     }, [])
@@ -50,7 +50,7 @@ export default function MicrosoftBIHome(props){
             >
                 <div>
                 {/* <iframe title="Sales Report Draft" className='w-full mt-[25px]' width={1140} height={541.25} src="https://app.powerbi.com/reportEmbed?reportId=0a05977f-d9a5-446f-b69a-75f8063235b0&autoAuth=true&ctid=0859cc3b-5093-4056-821f-3e363f0f95fc" frameborder="0" allowFullScreen="true"></iframe> */}
-                <iframe title="Sales Report Draft" className='rounded-sm w-[350px] h-[218px] md:w-[600px] mx-auto mt-[25px]' width={600} height={373.5} src="https://app.powerbi.com/view?r=eyJrIjoiYjRhY2YwNjctYTdiZC00NjFlLWIxZjctMmU3OGVjNTQxODRiIiwidCI6IjA4NTljYzNiLTUwOTMtNDA1Ni04MjFmLTNlMzYzZjBmOTVmYyJ9" frameborder="0" allowFullScreen="true"></iframe>
+                <iframe title="Sales Report Draft" className='rounded-sm w-[350px] shadow-card h-[218px] md:w-[800px] md:h-[498px] mx-auto my-[50px]' width={800} height={498} src="https://app.powerbi.com/view?r=eyJrIjoiYjRhY2YwNjctYTdiZC00NjFlLWIxZjctMmU3OGVjNTQxODRiIiwidCI6IjA4NTljYzNiLTUwOTMtNDA1Ni04MjFmLTNlMzYzZjBmOTVmYyJ9" frameborder="0" allowFullScreen="true"></iframe>
                 </div>
                 </motion.div>
                 {/* <h1 className='mt-[25px] text-mobilexl md:text-xl text-black text-center mb-[25px] lg:mb-[100px]'>{props.microBIContent.fields.heading2}</h1> */}

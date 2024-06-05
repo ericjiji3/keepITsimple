@@ -77,7 +77,7 @@ module.exports = {
           letterSpacing: '0',
           fontWeight: '800',
         }],
-        'mobilebase': ['12px', {
+        'mobilebase': ['11', {
           lineHeight: 'normal',
           letterSpacing: '0',
           fontWeight: '500',

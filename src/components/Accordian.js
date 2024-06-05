@@ -10,6 +10,8 @@ export default function Accordian(props){
     const [ind, setInd] = useState(0);
     const [width, setWidth] = useState(0);
 
+    
+
     useEffect(() => {
         setWidth(window.innerWidth);
     }, [])
@@ -48,7 +50,7 @@ export default function Accordian(props){
                 duration: 0.5
             }}
             >
-        <div className="max-w-[400px] md:max-w-[1200px] xl:max-w-[1100px] mx-auto flex md:flex-row flex-col bg-black rounded-lg px-[25px] md:py-[50px] pt-[50px]">
+        <div className="max-w-[400px] md:max-w-[1200px] xl:max-w-[1100px] mx-auto flex md:flex-row flex-col bg-black rounded-lg mx-[10px] px-[20px] md:py-[50px] pt-[50px]">
             <div className="flex-1 md:flex-[40%] text-white text-mobilexl lg:text-xl mr-0 md:mr-[50px]">
                 {props.accContent.fields.accordianBlock.map((acc, index) => (
                     <div key={index} className={ind == index ? "border-b-2 border-blue pb-[20px] transition-all duration-500 mb-[20px]" : "border-b-2 border-white pb-[20px] transition-all duration-500 mb-[20px]"}>
@@ -69,7 +71,12 @@ export default function Accordian(props){
             <div className="flex-1 md:flex-[60%] relative">
                 {props.accContent.fields.accordianBlock.map((acc, index) => (
                     <div key={index} className='lg:h-full h-[85px]'>
-                        <Image className={ind == index ? "absolute top-[50%] translate-y-[-50%] opacity-100 border-8 border-white rounded-md transition-[opacity] ease-in-out duration-500" : "absolute top-[50%] translate-y-[-50%] opacity-0 border-8 border-white rounded-md transition-[opacity] ease-in-out duration-500"} src={"https:" + acc.fields.media.fields.file.url} width={acc.fields.media.fields.file.details.image.width} height={acc.fields.media.fields.file.details.image.height} alt={acc.fields.media.fields.file.fileName}/>
+                        {acc.fields.media.fields.file.details.hasOwnProperty('image') ? 
+                            <Image className={ind == index ? "absolute top-[50%] translate-y-[-50%] opacity-100 border-4 border-white rounded-md transition-[opacity] ease-in-out duration-1000" : "absolute top-[50%] translate-y-[-50%] opacity-0 border-8 border-white rounded-md transition-[opacity] ease-in-out duration-1000"} src={"https:" + acc.fields.media.fields.file.url} width={acc.fields.media.fields.file.details.image.width} height={acc.fields.media.fields.file.details.image.height} alt={acc.fields.media.fields.file.fileName}/>
+                            :
+                            <video controls className={ind == index ? "absolute top-[50%] translate-y-[-50%] opacity-100 border-4 border-white rounded-md transition-[opacity] ease-in-out duration-1000" : "absolute top-[50%] translate-y-[-50%] opacity-0 border-8 border-white rounded-md transition-[opacity] ease-in-out duration-1000"} src={"https:" + acc.fields.media.fields.file.url} alt={acc.fields.media.fields.file.fileName}></video>
+                        }
+                        
                     </div>
                 ))}
             </div>
