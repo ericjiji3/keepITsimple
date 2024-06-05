@@ -29,6 +29,9 @@ ul{
 .carousel .control-dots{
   bottom: -15px!important;
 }
+.carousel .thumbs-wrapper{
+  margin: 10px!important;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
