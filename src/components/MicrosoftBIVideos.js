@@ -25,9 +25,10 @@ export default function MicrosoftBIVideos(props){
     return(
         // className="max-w-[1200px] mx-auto flex bg-black rounded-lg px-[25px] py-[50px] mt-[50px]"
         <motion.div
-            initial={{ opacity: 0, translateY: -200 }}
-            whileInView={{ opacity: 1, translateY: 0 }}
-            viewport={{margin: (width <= 768 ? '-300px' : width <= 1024 ? '-400px' : width <= 1280 ? '0px -500px' : '-500px')}}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            // viewport={{margin: (width <= 768 ? '-300px' : width <= 1024 ? '-400px' : width <= 1280 ? '0px' : '-500px')}}
+            viewport={{ amount: 0.85 }}
             transition={{
                 type: "ease-in",
                 duration: 0.5
