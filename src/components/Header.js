@@ -8,7 +8,7 @@ export default function Header(){
                 <div>
                     <a className="flex flex-1 items-center text-mobilexl lg:text-lg" href="#chatbot">
                     <Image className="rounded-[5px]" src={Logo} width={30} alt="logo"/>
-                    <span className="ml-[10px]">Keep<span className="text-blue">IT</span>Simple</span>
+                    <span className="ml-[10px]">Keeping<span className="text-blue">IT</span>Simple</span>
                     </a>
                 </div>
  

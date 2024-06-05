@@ -133,7 +133,7 @@ export default function Contact(props){
                 duration: 0.5
             }}
             >
-                    <form ref={form} onSubmit={sendEmail} className='bg-blue text-white rounded-md mx-auto w-[95%] lg:w-[85%] p-[25px] lg:p-[50px] text-mobilexl lg:text-base shadow-card mb-[15px]'>
+                    <form ref={form} onSubmit={sendEmail} className='bg-blue text-white rounded-md mx-auto w-[95%] lg:w-[65%] p-[25px] lg:p-[30px] text-mobilexl lg:text-base shadow-card mb-[15px]'>
                         <div className='flex flex-col lg:flex-row gap-[15px] lg:gap-[25px] w-full'>
                             <div className='flex flex-1 flex-col'>
                                 <label className="text-left mb-[5px]" for="fname">First Name*</label>
@@ -144,13 +144,15 @@ export default function Contact(props){
                                 <input className={lnameErr ? "text-black rounded-sm border border-[#DC143C] border-[2px] p-[10px] transition-all duration-500" : "text-black rounded-sm border border-blackish border-[2px] p-[10px] transition-all duration-500"} placeholder='Last Name' type="text" id="lname" name="lname" value={last} onChange={(e) => setLast(e.target.value)}></input>
                             </div>
                         </div>
-                        <div className='flex flex-col mt-[15px]'>
+                        <div className='flex flex-col lg:flex-row gap-[15px] lg:gap-[25px] w-full'>
+                        <div className='flex flex-1 flex-col mt-[15px]'>
                             <label className="text-left mb-[5px]" for="phone">Phone</label>
                             <input className="text-black rounded-sm border border-blackish border-[2px] p-[10px]" placeholder='Phone' type="text" id="phone" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)}></input>
                         </div>
-                        <div className='flex flex-col mt-[15px]'>
+                        <div className='flex flex-1 flex-col mt-[15px]'>
                             <label className="text-left mb-[5px]" for="email">Email*</label>
                             <input className={emailErr ? "text-black rounded-sm border border-[#DC143C] border-[2px] p-[10px] transition-all duration-500" : "text-black rounded-sm border border-blackish border-[2px] p-[10px] transition-all duration-500"} placeholder='Email' type="text" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                        </div>
                         </div>
                         <div className='flex flex-col mt-[15px]'>
                             <label className="text-left mb-[5px]" for="demo">Demo*</label>

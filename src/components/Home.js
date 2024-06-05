@@ -93,16 +93,16 @@ export default function Home(props){
                     }} />
                     <div id="flat-chat"></div>     */}
                     <div className='relative'>
-                        <Image className='w-full z-[2] absolute top-[50%] translate-y-[-50%] rounded-sm' src={Hero1}/>
-                        <Image className='w-[85%] z-[1] absolute right-[-20%] top-[50%] translate-y-[40%] rounded-sm' src={Hero2}/>
-                        <Image className='w-[65%] z-[1] absolute right-[30%] top-[-210px] rounded-sm' src={Hero3}/>
+                        <Image className='md:w-full z-[2] absolute md:top-[50%] translate-y-[-50%] rounded-sm' src={Hero1}/>
+                        <Image className='md:w-[85%] z-[1] absolute md:right-[-20%] md:top-[50%] translate-y-[40%] rounded-sm' src={Hero2}/>
+                        <Image className='md:w-[65%] z-[1] absolute md:right-[30%] md:top-[-210px] rounded-sm' src={Hero3}/>
                     </div>
 
                 </div>
                 </motion.div>
             </div>
             
-            <div class="h-[80px] md:h-[150px] w-full bg-white shadow-circle rounded-bl-[100%] rounded-br-[100%]"></div>
+            <div class="h-[75px] md:h-[150px] w-full bg-white shadow-circle rounded-bl-[100%] rounded-br-[100%]"></div>
         </div>
     )
 }
