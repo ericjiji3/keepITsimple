@@ -44,7 +44,7 @@ export default function Accordian(props){
         <motion.div
             initial={{ opacity: 0, translateX: -200 }}
             whileInView={{ opacity: 1, translateX: 0 }}
-            viewport={{margin: (width <= 1500 ? '50px' : '-300px')}}
+            viewport={{margin: (width <= 1500 ? '50px' : '-300px'), once: true}}
             transition={{
                 type: "ease-in",
                 duration: 0.5

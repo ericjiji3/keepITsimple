@@ -28,8 +28,9 @@ export default function MicrosoftBIVideos(props){
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             // viewport={{margin: (width <= 768 ? '-300px' : width <= 1024 ? '-400px' : width <= 1280 ? '0px' : '-500px')}}
-            viewport={{ amount: 0.6 }}
+            viewport={{ amount: 0.6, once: true }}
             transition={{
+                repeat: 0,
                 type: "ease-in",
                 duration: 0.5
             }}

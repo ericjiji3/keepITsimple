@@ -44,6 +44,7 @@ export default function Home(props){
                 type: "ease-in",
                 duration: 0.5
             }}
+            viewport={{once: true}}
             className="flex-1 md:flex-[65%] mr-0 md:mr-[50px] md:mb-0 mb-[50px]"
             >
                 <div>
