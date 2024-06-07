@@ -6,13 +6,15 @@ import Twitter from '../../public/yt-icon.png';
 
 export default function Footer(){
     return(
-        <div className="bg-blue pt-[170px] lg:pt-[150px] pb-[20px] mt-[-140px]">
+        <div className="bg-blue pt-[170px] lg:pt-[150px] pb-[20px] mt-[-130px]">
             <div className="max-w-[350px] md:max-w-[1200px] xl:max-w-[1100px] flex justify-between mx-auto">
                 <div className="flex items-center">
                     <Image className="rounded-[5px]" src={Logo} width={20} height={20} alt="logo"/>
                     <span className="text-white text-xs ml-[10px]">©2024 KeepingITSimple - All rights reserved.</span>
+
                 </div>
-                <div className="flex self-center">
+                <div className="flex self-center items-center">
+                    <a href="/privacy"><span className="text-white text-xs mr-[15px]">Privacy Policy</span></a>
                     <a href="https://www.linkedin.com/company/kis-hq/" target="__blank"><Image className="w-[15px] mr-[5px] lg:w-[20px]" src={Facebook} width={20} height={20} alt="logo"/></a>
                     <a href="https://www.youtube.com/@BlakeEdwardsPBI" target="__blank"><Image className="w-[15px] lg:w-[20px]" src={Ig} width={20} height={20} alt="logo"/></a>
                 </div>

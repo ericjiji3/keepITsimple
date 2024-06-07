@@ -17,6 +17,7 @@ export default function Contact(props){
     const [email, setEmail] = useState("");
     const [demo, setDemo] = useState("");
     const [message, setMessage] = useState("");
+    const [phoneErr, setPhoneErr] = useState(false);
     const [fnameErr, setFnameErr] = useState(false);
     const [lnameErr, setLnameErr] = useState(false);
     const [emailErr, setEmailErr] = useState(false);
@@ -47,6 +48,12 @@ export default function Contact(props){
                     setLnameErr(true);
                 }
             }
+            if(field === 'phone'){
+                if(!data[field]){
+                    validate = false;
+                    setPhoneErr(true);
+                }
+            }
             if(field === 'demo'){
                 if(!data[field]){
                     validate = false;
@@ -62,12 +69,11 @@ export default function Contact(props){
         setFnameErr(false);
         setLnameErr(false);
         setEmailErr(false);
-        setDemoErr(false);
+        setPhoneErr(false);
         console.log(e.target);
         var data = {
             'fname' : first,
             'lname' : last,
-            'demo' : demo,
             'phone' : phone,
             'email' : email,
             'message' : message
@@ -146,22 +152,22 @@ export default function Contact(props){
                         </div>
                         <div className='flex flex-col lg:flex-row gap-[15px] lg:gap-[25px] w-full'>
                         <div className='flex flex-1 flex-col mt-[15px]'>
-                            <label className="text-left mb-[5px]" for="phone">Phone</label>
-                            <input className="text-black rounded-sm border border-blackish border-[2px] p-[10px]" placeholder='Phone' type="text" id="phone" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)}></input>
+                            <label className="text-left mb-[5px]" for="phone">Phone*</label>
+                            <input className={phoneErr ? "text-black rounded-sm border border-[#DC143C] border-[2px] p-[10px] transition-all duration-500" : "text-black rounded-sm border border-blackish border-[2px] p-[10px] transition-all duration-500"} placeholder='Phone' type="text" id="phone" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)}></input>
                         </div>
                         <div className='flex flex-1 flex-col mt-[15px]'>
                             <label className="text-left mb-[5px]" for="email">Email*</label>
                             <input className={emailErr ? "text-black rounded-sm border border-[#DC143C] border-[2px] p-[10px] transition-all duration-500" : "text-black rounded-sm border border-blackish border-[2px] p-[10px] transition-all duration-500"} placeholder='Email' type="text" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
                         </div>
                         </div>
-                        <div className='flex flex-col mt-[15px]'>
+                        {/* <div className='flex flex-col mt-[15px]'>
                             <label className="text-left mb-[5px]" for="demo">Demo*</label>
                             <select className={demoErr ? "text-black rounded-sm border border-[#DC143C] border-[2px] p-[10px] transition-all duration-500" : "text-black rounded-sm border border-blackish border-[2px] p-[10px] transition-all duration-500"} name="demo" id="demo" value={demo} onChange={(e) => setDemo(e.target.value)}>
                                 <option value="" disabled selected>Select Demo</option>
                                 <option value="chatbot">Chatbot</option>
                                 <option value="powerBi">Power BI</option>
                             </select>
-                        </div>
+                        </div> */}
                         <div className='flex flex-col mt-[15px]'>
                             <label className="text-left mb-[5px]" for="comments">Additional Comments</label>
                             <textarea className="text-black rounded-sm border border-blackish border-[2px] p-[10px] h-[200px]" placeholder="Type message here..." name="comments" id="comments" onChange={(e) => setMessage(e.target.value)}></textarea>
