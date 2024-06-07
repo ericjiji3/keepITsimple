@@ -32,6 +32,11 @@ module.exports = {
         'lg': '40px'
       },
       fontSize: {
+        'mobilefine': ['9px', {
+          lineHeight: 'normal',
+          letterSpacing: '0',
+          fontWeight: '400',
+        }],
         'fine': ['16px', {
           lineHeight: 'normal',
           letterSpacing: '0',
