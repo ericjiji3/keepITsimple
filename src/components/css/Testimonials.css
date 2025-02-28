@@ -1,0 +1,121 @@
+.testimonials-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0 5rem 0;
+    background-color: #fff;
+    width: 100vw;
+    /* border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5; */
+}
+
+@media (max-width: 960px) {
+  .testimonials-main {
+    align-items: center;
+    padding: 6rem 0 6rem 0;
+  }
+}
+
+
+
+.testimonials-main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80vw;
+}
+
+.testimonials-main h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* margin-bottom: 0.5rem; */
+}
+
+.testimonials-main h2 {
+  font-size: 1rem;
+  color: #5d5d5d;
+  margin-bottom: 2rem;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* Space out the testimonials */
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 2rem; /* Space between testimonials */
+}
+
+
+.testimonial-card {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 28rem; /* Adjust width as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 960px) {
+  .testimonial-card {
+    width: 80vw;
+  }
+}
+
+.testimonial-top-container{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.75rem;
+    
+} 
+
+.testimonial-top-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+}
+
+.testimonial-top-text h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  /* margin-bottom: 0.1rem; */
+}
+
+.testimonial-top-text h4 {
+  font-size: 0.8rem;
+  color: #5d5d5d;
+  /* margin-bottom: 2rem; */
+}
+
+.testimonial-card p {
+  font-size: 0.9rem;
+  color: #333;
+  text-align: left;
+  font-style: italic;
+}
+
+
+.testimonial-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  padding-right: 0.5rem;
+}
+
+.testimonial-image {
+  /* object-fit: contain; */
+  transition: all 0.3s ease;
+  height: 2.3rem;
+  width: 2.3rem;
+}
+
+

@@ -50,8 +50,8 @@ export default function Header(){
     }, [isOpen]);
 
     return(
-        <div className="header-main" aria-label="Login or Schedule a Demo">
-              <a className="__logo" href="#">
+        <div className="header-main" aria-label="header">
+              <a className="__logo" href="/">
                 <Image 
                   src={Logo}
                   alt="Logo"
@@ -66,11 +66,11 @@ export default function Header(){
     <NavigationMenuItem className="header-menu-item">
       <NavigationMenuLink href="/about">About Us</NavigationMenuLink>
     </NavigationMenuItem>
+
     <NavigationMenuItem className="header-menu-item">
-      <NavigationMenuLink href="#case-studies" onClick={handleScroll}>
-        Case Studies
-      </NavigationMenuLink>
+      <NavigationMenuLink href="/#case-studies">Case Studies</NavigationMenuLink>
     </NavigationMenuItem>
+
     <NavigationMenuItem className="header-menu-item">
       <NavigationMenuLink href="/contact">Contact</NavigationMenuLink>
     </NavigationMenuItem>
@@ -115,7 +115,7 @@ export default function Header(){
                     </NavigationMenuItem>
                     <div className="menu-divider"></div>
                     <NavigationMenuItem className="mobile-menu-item">
-                      <NavigationMenuLink className="mobile-menu-link" href="#case-studies" onClick={handleScroll}>
+                      <NavigationMenuLink className="mobile-menu-link" href="/#case-studies">
                         Case Studies
                       </NavigationMenuLink>
                     </NavigationMenuItem>

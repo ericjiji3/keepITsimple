@@ -1,0 +1,126 @@
+.case-studies-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0 5rem 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+@media (max-width: 960px) {
+  .case-studies-main {
+    padding: 6rem 0 6rem 0;
+  }
+}
+
+.case-studies-top-container{
+    text-align: center;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80vw;
+} 
+
+@media (max-width: 960px) {
+  .case-studies-top-container {
+    width: 80vw;
+  }
+}
+
+.case-studies-top-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+} 
+
+.case-studies-top-text h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+} 
+
+.case-studies-top-text h2{
+    font-size: 1rem;
+    color: #5d5d5d;
+    text-align: left;
+}
+
+@media (max-width: 960px) {
+  .case-studies-top-text h2 {
+   margin-bottom: 0;
+  }
+}
+
+.case-studies-bottom-container{
+    display: flex;
+    justify-content: space-between; /* Space out the case study cards */
+    gap: 2rem; /* Space between cards */
+    width: 80vw;
+}
+
+@media (max-width: 960px) {
+  .case-studies-bottom-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.case-studies-image-group {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Round corners */
+  width: 100%; /* Fixed width for cards */
+  text-align: left; /* Align text to the left */
+}
+
+
+.case-studies-image-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Space between items */
+  height: 100%; /* Ensure it takes full height of the card */
+  width: 100%;
+}
+
+.case-studies-image-wrapper h3{
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 1rem 1rem;
+}
+
+.case-studies-image-wrapper p {
+  width: 100%;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.case-studies-image-wrapper .case-study-button {
+  background: none;
+  color: #3a69e9; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: left; /* Center text */
+  text-decoration: underline;
+  margin: auto 1rem 1rem 1rem;
+}
+
+.case-studies-image-wrapper .case-study-button:hover {
+  background-color: #005bb5; /* Darker shade on hover */
+}
+
+.case-study-image {
+  object-fit: fill;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 960px) {
+  .case-study-image {
+    width: 80vw;
+  }
+}
+

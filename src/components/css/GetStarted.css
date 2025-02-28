@@ -1,0 +1,120 @@
+.get-started-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 0 5rem 0;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.get-started-section-parent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+}
+
+@media (max-width: 960px) {
+  .get-started-section-parent {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 960px) {
+  .get-started-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.get-started-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.get-started-section p {
+  font-size: 1rem;
+  color: #5d5d5d;
+  /* margin-bottom: 2rem; */
+  text-align: left;
+}
+
+@media (max-width: 960px) {
+  .get-started-section p {
+    text-align: center;
+  }
+}
+
+.get-started-section .highlight {
+  color: #0070f3; /* Highlight color */
+}
+
+.get-started-section .logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  width: 80vw;
+  overflow-x: hidden;
+  gap: 2rem; /* Space between logos */
+}
+
+.get-started-section .logo-wrapper {
+  flex: 0 0 auto; /* Prevent logos from shrinking */
+}
+
+.get-started-section .logo {
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.get-started-section .logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.mini-menu-icon{
+  filter: invert(1);
+}
+
+.get-started-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50vw;
+}
+
+@media (max-width: 960px) {
+  .get-started-content {
+    width: 80vw;
+    margin-bottom: 1rem;
+  }
+}
+
+.get-started-button-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.get-started-button{
+  background-color: #3a69e9;
+  font-weight: 500;
+  color: #fff;
+  padding: 0.65em 1.25em !important;
+  /* margin-top: 0.75rem; */
+  font-size: 20px;
+  height: fit-content;  
+  border-radius: 7px !important;
+  text-align: center;
+}

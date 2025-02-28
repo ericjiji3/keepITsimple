@@ -1,0 +1,51 @@
+.partners-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.partners-marquee-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.partners-marquee-track {
+  display: flex;
+  width: calc(2 * 100%); /* Ensures the track is twice the width of the container */
+}
+
+.partners-image-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem;
+  width: fit-content; /* Each group takes up the full width of the container */
+}
+
+.partner-image-wrapper {
+  flex: 0 0 auto;
+}
+
+.partner-image {
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.partner-image:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Optional: Pause on hover */
+.partners-marquee-container:hover .partners-marquee-track {
+  animation-play-state: paused;
+}

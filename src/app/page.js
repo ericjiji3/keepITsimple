@@ -1,13 +1,19 @@
 import Image from "next/image";
 import Header from "@/components/Header";
-import Home from "@/components/Home";
+import Hero from "@/components/Hero";
 import ChatbotCards from "@/components/ChatbotCards";
 import MicrosoftBIHome from "@/components/MicrosoftBIHome";
 import Accordian from "@/components/Accordian";
 import MicrosoftBIVideos from "@/components/MicrosoftBIVideos";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { getHome, getChatbotCardsSection, getMicrosoftBIHomeSection, getAccordianSection, getVideoSection, getContactSection } from "@/utils/contentful";
+import { getHome, getChatbotCardsSection, getMicrosoftBIHomeSection, getAccordianSection, getVideoSection, getContactSection, getTestimonial1 } from "@/utils/contentful";
+import Testimonials from "@/components/Testimonials";
+import ERPIntegrationSection from "@/components/ERPIntegrationSection";
+import CaseStudies from "@/components/CaseStudies";
+import FAQ from "@/components/FAQ";
+import GetStarted from "@/components/GetStarted";
+import ScrollHandler from "@/components/ScrollHandler";
 
 export default async function App() {
   const home = await getHome();
@@ -16,22 +22,39 @@ export default async function App() {
   const accordianData = await getAccordianSection();
   const videoData = await getVideoSection();
   const contactData = await getContactSection();
-
+  const testimonial1 = await getTestimonial1();
   return (
-    <main className="bg-white">
-      <div >
+    <main className="body-main">
+      <div className="body-main-content">
         <Header/>
-        <Home homeContent={home}/>
-        <ChatbotCards cardsContent={videoData}/>
-        <MicrosoftBIHome microBIContent={microsoftBIHome}/>
-        <div className="bg-blue py-[50px] lg:py-[100px]">
-          <Accordian accContent={accordianData}/>
-          {/* <MicrosoftBIVideos vidsContent={videoData}/> */}
+        <div id="home">
+          <Hero homeContent={home}/>
         </div>
-        <Contact contContent={contactData}/>
-        <Footer/>
-      </div>
+        <div id="erp-integration">
+          <ERPIntegrationSection/>
+        </div>
+        <div id="testimonials">
+          <Testimonials homeContent={home} testimonialsContent={testimonial1}/>
+        </div>
+        <div id="case-studies">
+          <CaseStudies/>
+        </div>
+        <div id="faq">
+          <FAQ/>
+        </div>
+        <div id="get-started">
+          <GetStarted/>
+        </div>
+        {/* <div className="bg-blue py-[50px] lg:py-[100px]"> 
+        <Accordian accContent={accordianData}/>
+        <MicrosoftBIVideos vidsContent={videoData}/>
       
+      
+</div> */}
+        {/* <Contact contContent={contactData}/> */}
+        <Footer/> 
+      </div>
+      <ScrollHandler />
     </main>
   );
 }

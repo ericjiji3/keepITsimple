@@ -5,6 +5,7 @@ import Arrow from "../../public/accArrow.png";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+
 export default function Accordian(props){
     const [accRef, setAccRef] = useState({});
     const [ind, setInd] = useState(0);

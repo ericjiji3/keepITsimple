@@ -1,6 +1,10 @@
 import { createClient } from 'contentful';
 
 export const createContentClient = () => {
+  console.log('createClient:', createClient);
+  console.log('Space ID:', process.env.CONTENTFUL_SPACE_ID);
+  console.log('Access Token:', process.env.CONTENTFUL_ACCESS_TOKEN);
+
   return createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -18,6 +22,11 @@ export const getEntriesByType = async (type) => {
 
 export const getHome = async () => {
   const results = await client.getEntry('5Q7PQMBmlsVS6lUsfC4PMH')
+  return results
+}
+
+export const getTestimonial1 = async () => {
+  const results = await client.getEntry('2QDcDnXdVFtPN2VbOr8Mse')
   return results
 }
 
