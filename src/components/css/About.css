@@ -74,8 +74,8 @@
 
 .about-profile-image {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     overflow: hidden;
     justify-content: center;
@@ -98,7 +98,8 @@
 
 @media (max-width: 960px) {
     .about-profile-image {
-        width: 3rem;
+        width: 5rem;
+        height: 5rem;
     }
 }
 
@@ -109,6 +110,14 @@
     object-position: center;
     border-radius: 50%;
     z-index: 0;
+}
+
+@media (max-width: 960px) {
+    .about-profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .about-profile-text {
