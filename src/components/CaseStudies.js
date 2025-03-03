@@ -9,7 +9,7 @@ import Image3 from "../components/images/case-studies/image3.png";
 
 
 export default function CaseStudies(props) {
-  console.log(props.caseStudiesContent.fields.caseStudies);
+  // console.log(props.caseStudiesContent.fields.caseStudies);
   return (
     <div id="case-studies" className="case-studies-main">
       <div className="case-studies-top-container">
@@ -22,19 +22,20 @@ export default function CaseStudies(props) {
 
       <div className="case-studies-bottom-container">
       {props.caseStudiesContent.fields.caseStudies.map((caseStudy, index) => (
+        console.log(caseStudy.fields.image.fields.file.url),
         <div key={index} className="case-studies-image-group">
           <div className="case-studies-image-wrapper">
             <Image 
-              src={caseStudy.fields.image.fields.file.url.startsWith('//') 
-                ? `https:${caseStudy.fields.image.fields.file.url}` 
-                : `https://${caseStudy.fields.image.fields.file.url}`} 
+               src={"https:" + caseStudy.fields.image.fields.file.url}
+
               alt="Case Study Image" 
               width={300} 
               height={300} 
               className="case-study-image" 
             />
-            <h3>{caseStudy.fields.header}</h3>
-            <p>{caseStudy.fields.paragraph}</p>
+            {/* <div>{caseStudy.fields?.image.fields.file.url}</div> */}
+            <h3>{caseStudy.fields?.header}</h3>
+            <p>{caseStudy.fields?.paragraph}</p>
             <button 
               className="case-study-button" 
               onClick={() => window.open(caseStudy.fields.pdf.fields.file.url, "_blank")}
