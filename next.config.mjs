@@ -12,6 +12,7 @@
                 pathname: '/**',
               },
             ],
+            domains: ['images.ctfassets.net'],
           },
     }
     export default nextConfig;
