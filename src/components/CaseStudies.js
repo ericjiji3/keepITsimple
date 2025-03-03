@@ -24,7 +24,15 @@ export default function CaseStudies(props) {
       {props.caseStudiesContent.fields.caseStudies.map((caseStudy, index) => (
         <div key={index} className="case-studies-image-group">
           <div className="case-studies-image-wrapper">
-            <Image src={"https://" + caseStudy.fields.image.fields.file.url} alt="Case Study Image" width={300} height={300} className="case-study-image" />
+            <Image 
+              src={caseStudy.fields.image.fields.file.url.startsWith('//') 
+                ? `https:${caseStudy.fields.image.fields.file.url}` 
+                : `https://${caseStudy.fields.image.fields.file.url}`} 
+              alt="Case Study Image" 
+              width={300} 
+              height={300} 
+              className="case-study-image" 
+            />
             <h3>{caseStudy.fields.header}</h3>
             <p>{caseStudy.fields.paragraph}</p>
             <button 

@@ -48,8 +48,10 @@ export default function Testimonials(props) {
             <div className="testimonial-top-container">
                 <div className="testimonial-image-wrapper">
                     <Image
-                    src={"https://" + testimonial.fields.image.fields.file.url}
-                    alt="oops"
+                    src={testimonial.fields.image.fields.file.url.startsWith('//') 
+                      ? `https:${testimonial.fields.image.fields.file.url}` 
+                      : `https://${testimonial.fields.image.fields.file.url}`}
+                    alt="Testimonial Image"
                     width={80}
                     height={80}
                 className="testimonial-image"
