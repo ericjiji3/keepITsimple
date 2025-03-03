@@ -43,9 +43,9 @@ export default function FAQ() {
       <div className="faq-bottom-container">
       <Accordion type="single" collapsible>
         {faqItems.map((item, index) => (
-          <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger className="flex justify-between gap-x-4 ">{item.question}</AccordionTrigger>
-            <AccordionContent className="flex">{item.answer}</AccordionContent>
+          <AccordionItem className="faq-color-1" key={index} value={`item-${index}`}>
+            <AccordionTrigger className="flex justify-between gap-x-4 faq-color-1">{item.question}</AccordionTrigger>
+            <AccordionContent className="flex faq-color-2">{item.answer}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>

@@ -8,7 +8,8 @@ import Image2 from "../components/images/case-studies/image2.png";
 import Image3 from "../components/images/case-studies/image3.png";
 
 
-export default function CaseStudies() {
+export default function CaseStudies(props) {
+  console.log(props.caseStudiesContent.fields.caseStudies);
   return (
     <div id="case-studies" className="case-studies-main">
       <div className="case-studies-top-container">
@@ -18,16 +19,27 @@ export default function CaseStudies() {
         </div>
       </div>
 
+
       <div className="case-studies-bottom-container">
+      {props.caseStudiesContent.fields.caseStudies.map((caseStudy, index) => (
         <div className="case-studies-image-group">
           <div className="case-studies-image-wrapper">
-            <Image src={Image1} alt="Case Study 1" className="case-study-image" />
-            <h3>From Outdated Systems to Data-Driven Success</h3>
-            <p>How MPM Marketing Transformed Reporting with Power BI.</p>
-            <button className="case-study-button">View Case Study</button>
+            <Image src={"https://" + caseStudy.fields.image.fields.file.url} alt="Case Study Image" width={300} height={300} className="case-study-image" />
+            <h3>{caseStudy.fields.header}</h3>
+            <p>{caseStudy.fields.paragraph}</p>
+            <button 
+              className="case-study-button" 
+              onClick={() => window.open(caseStudy.fields.pdf.fields.file.url, "_blank")}
+            >
+              View Case Study
+            </button>
           </div>
         </div>
-        <div className="case-studies-image-group">
+        ))}
+
+
+
+        {/* <div className="case-studies-image-group">
           <div className="case-studies-image-wrapper">
             <Image src={Image2} alt="Case Study 2" className="case-study-image" />
             <h3>From Preparation to Execution: Power BI for a Smooth ERP Transition</h3>
@@ -42,7 +54,7 @@ export default function CaseStudies() {
             <p>Read how we added value to a company established over 150 years ago.</p>
             <button className="case-study-button">View Case Study</button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

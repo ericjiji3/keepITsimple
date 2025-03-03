@@ -7,7 +7,7 @@ import Accordian from "@/components/Accordian";
 import MicrosoftBIVideos from "@/components/MicrosoftBIVideos";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { getHome, getChatbotCardsSection, getMicrosoftBIHomeSection, getAccordianSection, getVideoSection, getContactSection, getTestimonial1 } from "@/utils/contentful";
+import { getHome, getChatbotCardsSection, getMicrosoftBIHomeSection, getAccordianSection, getVideoSection, getContactSection, getTestimonials, getCaseStudies } from "@/utils/contentful";
 import Testimonials from "@/components/Testimonials";
 import ERPIntegrationSection from "@/components/ERPIntegrationSection";
 import CaseStudies from "@/components/CaseStudies";
@@ -22,7 +22,9 @@ export default async function App() {
   const accordianData = await getAccordianSection();
   const videoData = await getVideoSection();
   const contactData = await getContactSection();
-  const testimonial1 = await getTestimonial1();
+  const testimonials = await getTestimonials();
+  const caseStudies = await getCaseStudies();
+  
   return (
     <main className="body-main">
       <div className="body-main-content">
@@ -34,10 +36,10 @@ export default async function App() {
           <ERPIntegrationSection/>
         </div>
         <div id="testimonials">
-          <Testimonials homeContent={home} testimonialsContent={testimonial1}/>
+          <Testimonials homeContent={home} testimonialsContent={testimonials}/>
         </div>
         <div id="case-studies">
-          <CaseStudies/>
+          <CaseStudies caseStudiesContent={caseStudies}/>
         </div>
         <div id="faq">
           <FAQ/>

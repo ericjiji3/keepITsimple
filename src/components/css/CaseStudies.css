@@ -4,9 +4,9 @@
     align-items: center;
     justify-content: center;
     padding: 5rem 0 5rem 0;
-    background-color: #f9f9f9; /* Light background for contrast */
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
+    background: var(--background-2); /* Light background for contrast */
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 @media (max-width: 960px) {
@@ -55,9 +55,11 @@
 
 .case-studies-bottom-container{
     display: flex;
-    justify-content: space-between; /* Space out the case study cards */
+    justify-content: center; /* Space out the case study cards */
     gap: 2rem; /* Space between cards */
     width: 80vw;
+    flex-wrap: wrap;
+    /* overflow-x: scroll; */
 }
 
 @media (max-width: 960px) {
@@ -68,12 +70,19 @@
 }
 
 .case-studies-image-group {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: var(--container-background);
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  box-shadow: var(--container-shadow);
   overflow: hidden; /* Round corners */
-  width: 100%; /* Fixed width for cards */
+  width: 30vw; /* Fixed width for cards */
   text-align: left; /* Align text to the left */
+}
+
+@media (max-width: 960px) {
+  .case-studies-image-group {
+    width: 70vw;
+  }
 }
 
 
@@ -83,33 +92,39 @@
   justify-content: space-between; /* Space between items */
   height: 100%; /* Ensure it takes full height of the card */
   width: 100%;
+  border-radius: 7px;
 }
 
 .case-studies-image-wrapper h3{
-    font-size: 1rem;
+    font-size: 0.9rem;
+    color: var(--foreground);
     font-weight: 600;
     width: 100%;
-    padding: 1rem 1rem;
+    padding: 1rem 2rem 0.5rem 1.5rem;
 }
 
 .case-studies-image-wrapper p {
+  color: var(--muted-foreground);
+  font-size: 0.8rem;
   width: 100%;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1rem 0.5rem 1.5rem;
 }
 
 .case-studies-image-wrapper .case-study-button {
+  font-size: 0.8rem;
   background: none;
-  color: #3a69e9; /* Button text color */
+  color: var(--accent); /* Button text color */
   border: none; /* Remove border */
-  border-radius: 4px; /* Rounded corners */
+  border-radius: 7px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
   text-align: left; /* Center text */
   text-decoration: underline;
-  margin: auto 1rem 1rem 1rem;
+  margin: auto 1rem 1.5rem 1.5rem;
+  transition: all 0.3s ease;
 }
 
 .case-studies-image-wrapper .case-study-button:hover {
-  background-color: #005bb5; /* Darker shade on hover */
+opacity: 0.8;
 }
 
 .case-study-image {

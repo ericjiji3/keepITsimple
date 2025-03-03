@@ -6,9 +6,9 @@
     position: fixed;
     width: 100vw;
     line-height: 1.2;
-    background-color: #fff;
+    background: var(--background);
     border: none;
-    border-bottom: 1px solid #19191920;
+    border-bottom: 1px solid var(--border);
     width: 100vw;
     display: flex;
     align-items: center;
@@ -200,7 +200,7 @@
     left: 0;
     width: 100vw;
     height: calc(100vh - 48px);
-    background: #fff;
+    background: var(--background);
     z-index: 998;
     opacity: 0;
     visibility: hidden;
@@ -228,7 +228,7 @@
   }
   
   .mobile-menu .mobile-menu-item {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--background);
     margin: 1.5rem 0;
     /* border-radius: 12px; */
     cursor: pointer;
@@ -243,7 +243,7 @@
   .mobile-menu .mobile-menu-link {
     font-family: var(--avenir);
     font-weight: 500;
-    color: #484848;
+    color: var(--foreground);
     /* padding: 0.75em 1.5em; */
     font-size: 15px;
     width: 100%;

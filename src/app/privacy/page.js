@@ -19,7 +19,7 @@ export default function Privacy() {
                     
                     <div className="privacy-section">
                         <p>
-                            This Privacy Policy describes the policies of email: blakeedwards324@gmail.com, phone: 0468538241 on the collection, use and disclosure of your information that we collect when you use our website (https://www.bepbi.com/). (the "Service"). By accessing or using the Service, you are consenting to the collection, use and disclosure of your information in accordance with this Privacy Policy. If you do not consent to the same, please do not access or use the Service.
+                            This Privacy Policy describes the policies of email: blakeedwards324@gmail.com, phone: 0468538241 on the collection, use and disclosure of your information that we collect when you use our website (https://www.bepbi.com/). (the &quot;Service&quot;). By accessing or using the Service, you are consenting to the collection, use and disclosure of your information in accordance with this Privacy Policy. If you do not consent to the same, please do not access or use the Service.
                         </p>
                         <p>
                             We may modify this Privacy Policy at any time without any prior notice to you and will post the revised Privacy Policy on the Service. The revised Policy will be effective 180 days from when the revised Policy is posted in the Service and your continued access or use of the Service after such time will constitute your acceptance of the revised Privacy Policy. We therefore recommend that you periodically review this page.

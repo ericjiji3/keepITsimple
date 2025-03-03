@@ -119,7 +119,7 @@ export default function Contact(props) {
     return (
         <div className="contact-container" id="contact">
             <div className="contact-team-section">
-                <h2>Who you'll meet with</h2>
+                <h2>Who you&apos;ll meet with</h2>
                 <p>Meet with one of our knowledgeable team members to discuss your challenges and uncover new opportunities.</p>
                 
                 <div className="team-member">

@@ -18,7 +18,7 @@ export default function GetStarted() {
     <div className="get-started-section">
       <div className="get-started-section-parent">
       <div className="get-started-content">
-          <h2>We're so confident, we'll give you a free demo</h2>
+          <h2>We&apos;re so confident, we&apos;ll give you a free demo</h2>
           <p>You read that right... completely free. No lock in contract.</p>
       </div>
       <div className="get-started-button-container">

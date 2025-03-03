@@ -4,6 +4,8 @@
 
 :root {
   --background-color: #F6F7FE;
+  --background: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(81, 81, 81, 1) 100%);
+  --background-2: radial-gradient(circle, rgb(0, 0, 0) 60%, rgb(45, 45, 45) 100%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -144,3 +146,126 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+
+
+
+/* Theme Variables */
+:root {
+  --background: #ffffff;
+  --background-2: #f9f9f9;
+  --container-background: #fff;
+  --container-shadow: 0 2px 4px  rgba(0, 0, 0, 0.1);
+  --foreground: #1a1a1a;
+  --primary: #2f2f2f;
+  --secondary: #f0f4ff;
+  --accent: #3a69e9;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --border: #e5e5e5;
+  --faq-border: #e5e5e5;
+  --input: #ffffff;
+  --ring: rgba(67, 97, 238, 0.3);
+  --radius: 7px;
+  --invert: 1;
+}
+
+.dark-theme {
+  --background: #000;
+  --background-2: #050505;
+  --container-background: #000;
+  --container-shadow: 0 10px 20px  rgba(218, 218, 218, 0.01);
+  --foreground: #f5f5f5;
+  --primary: #cdcdcd;
+  --secondary: #1e293b;
+  --accent: #a1a1aa;
+  --muted: #2d2d2d;
+  --muted-foreground: #a1a1aa;
+  --card: #1e1e1e;
+  --card-foreground: #f5f5f5;
+  --border: #2d2d2d;
+  --faq-border: #3c3c3c;
+  --input: #1e1e1e;
+  --ring: rgba(129, 140, 248, 0.3);
+  --invert: 0;
+}
+
+/* Apply theme variables to elements */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Toggle Button Styling */
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--muted);
+}
+
+.theme-toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.icon-container {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.sun-icon, .moon-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--foreground);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.sun-icon.visible, .moon-icon.visible {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+.sun-icon.hidden, .moon-icon.hidden {
+  opacity: 0;
+  transform: rotate(90deg) scale(0);
+}
+
+/* Additional theme-specific styles for other components */
+a {
+  color: var(--primary);
+}
+
+button {
+  color: black;
+  border: none;
+  border-radius: var(--radius);
+}
+
+input, select, textarea {
+  background-color: var(--input);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+/* Add more component-specific theme styles as needed */

@@ -65,9 +65,9 @@ export default function Home(props){
                 </div>
                 <div className='hero-image-container'>
                     <div className='hero-image-box'>
-                        <Image className='hero-image bottom'  src={Hero1}/>
-                        <Image className='hero-image middle' src={Hero3}/>
-                        <Image className='hero-image top' src={Hero2}/>
+                        <Image className='hero-image bottom' alt="hero1" src={Hero1}/>
+                        <Image className='hero-image middle' alt="hero3" src={Hero3}/>
+                        <Image className='hero-image top' alt="hero2" src={Hero2}/>
 
                     </div>
 

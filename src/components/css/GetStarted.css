@@ -7,9 +7,9 @@
   padding: 5rem 0 5rem 0;
   width: 100vw;
   overflow-x: hidden;
-  background-color: #f9f9f9; /* Light background for contrast */
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  background: var(--background-2); /* Light background for contrast */
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .get-started-section-parent{
@@ -41,7 +41,6 @@
 
 .get-started-section p {
   font-size: 1rem;
-  color: #5d5d5d;
   /* margin-bottom: 2rem; */
   text-align: left;
 }

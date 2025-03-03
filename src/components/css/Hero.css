@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background: var(--background);
   min-height: 60vh;
   padding: 5rem 0 5rem 0;
   /* gap: 5rem; */
@@ -77,8 +77,13 @@
 .hero-header {
   font-size: 2rem;
   font-weight: 600;
-  color: #141414;
+  color: var(--foreground);
   text-align: left;
+}
+
+.hero-header h1{
+
+  color: var(--foreground);
 }
 
 @media (max-width: 960px) {
@@ -90,9 +95,14 @@
 .hero-subheader {
   font-size: 1rem;
   font-weight: 400;
-  color: #5d5d5d;
+  color: var(--muted-foreground);
   width: 360px;
 } 
+
+.hero-subheader h2{
+
+  color: var(--muted-foreground);
+}
 
 @media (max-width: 960px) {
   .hero-subheader {

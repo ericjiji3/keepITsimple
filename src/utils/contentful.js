@@ -16,7 +16,6 @@ export const getEntriesByType = async (type) => {
   const response = await client.getEntries({
     content_type: type,
   })
-
   return response.items
 }
 
@@ -25,8 +24,18 @@ export const getHome = async () => {
   return results
 }
 
-export const getTestimonial1 = async () => {
-  const results = await client.getEntry('2QDcDnXdVFtPN2VbOr8Mse')
+export const getTestimonials = async () => {
+  const results = await client.getEntry('2Xdbt35pOION4i8ghRatPv')
+  return results
+}
+
+export const getAbout = async () => {
+  const results = await client.getEntry('3STCtuRoSqgt4qqib0TQ5T')
+  return results
+}
+
+export const getCaseStudies = async () => {
+  const results = await client.getEntry('6ueapf3whaKNwEwCe07cOc')
   return results
 }
 
