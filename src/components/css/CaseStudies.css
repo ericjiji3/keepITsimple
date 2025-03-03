@@ -75,7 +75,7 @@
   border: 1px solid var(--border);
   box-shadow: var(--container-shadow);
   overflow: hidden; /* Round corners */
-  width: 20vw; /* Fixed width for cards */
+  width: 250px; /* Fixed width for cards */
   text-align: left; /* Align text to the left */
 }
 

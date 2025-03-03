@@ -51,12 +51,12 @@
 
 .testimonial-card {
   background: var(--container-background);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 0rem;
   text-align: center;
   width: 15rem; /* Adjust width as needed */
-  box-shadow: var(--container-shadow);
+  box-shadow: none;
 }
 
 @media (max-width: 960px) {
