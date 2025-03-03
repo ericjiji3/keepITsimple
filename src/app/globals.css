@@ -171,6 +171,7 @@ body {
   --ring: rgba(67, 97, 238, 0.3);
   --radius: 7px;
   --invert: 1;
+  --reverse-invert: invert(0);
 }
 
 .dark-theme {
@@ -191,6 +192,7 @@ body {
   --input: #1e1e1e;
   --ring: rgba(129, 140, 248, 0.3);
   --invert: 0;
+  --reverse-invert: invert(1);
 }
 
 /* Apply theme variables to elements */
