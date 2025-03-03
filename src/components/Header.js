@@ -53,7 +53,7 @@ export default function Header(){
 
     return(
         <div className="header-main" aria-label="Login or Schedule a Demo">
-              <a className="__logo" href="#">
+              <a className="__logo" href="/">
                 <Image 
                   src={LogoH1}
                   alt="Logo"
@@ -91,15 +91,7 @@ export default function Header(){
            
            
 
-
-                <Button
-                  className="header__button --primary"
-                //   onClick={() => {
-                //     redirectToSignupForm();
-                //   }}
-                >
-                  Book a Demo
-                </Button>
+              <a href="/contact" className="header__button --primary">Book a Demo</a>
                 
                 
                 

@@ -64,10 +64,10 @@ body {
 
 /* styles for home page */
 
-@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sen:wght@400..800&display=swap');
 
 *{
-  font-family: 'Sen', Avenir, sans-serif;
+  font-family: 'Inter', Avenir, sans-serif;
 } 
 
 
@@ -164,7 +164,7 @@ body {
   --secondary: #f0f4ff;
   --accent: #3a69e9;
   --muted: #f5f5f5;
-  --muted-foreground: #737373;
+  --muted-foreground: #5b5b5b;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
   --border: #e5e5e5;

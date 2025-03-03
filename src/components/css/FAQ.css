@@ -23,7 +23,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 80vw;
+    width: 50vw;
 }
 
 @media (max-width: 960px) {
@@ -64,7 +64,7 @@
 }
 
 .faq-bottom-container{
-    width: 80vw;
+    width: 100%;
 }
 
 .faq-color-1{
@@ -74,5 +74,8 @@
 }
 
 .faq-color-2{
-    color: var(--foreground);
+    color: var(--muted-foreground);
+    padding: 0;
+    margin: 0;
+    margin: 1rem 1rem 1rem 0;
 }

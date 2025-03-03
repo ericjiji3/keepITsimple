@@ -154,3 +154,33 @@
   }
 }
 
+.rightside-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+@media (max-width: 960px) {
+  .rightside-footer {
+    flex-direction: column;
+    justify-content: flex-start ;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+.footer-main .middle-item {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 960px) {
+  .footer-main .middle-item {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+}

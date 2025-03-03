@@ -38,6 +38,7 @@ export default function Contact(props) {
     const [commentsErr, setCommentsErr] = useState(false);
     const [status, setStatus] = useState("");
     const [result, setResult] = useState("");
+    const [erp, setErp] = useState("");
 
     function validateFields(data) {
         var validate = true;
@@ -193,23 +194,21 @@ export default function Contact(props) {
                             onChange={(e) => setEmail(e.target.value)} 
                         />
                     </div>
-                    
+
                     <div className="form-group">
-                        <label htmlFor="demo" className="sr-only">ERP System (Optional)</label>
-                        <Select>
-  <SelectTrigger className="w-full">
-    <SelectValue placeholder="ERP System (Not Required - But Helpful" />
-  </SelectTrigger>
-  <SelectContent>
-    <SelectItem value="chatbot">Chatbot</SelectItem>
-    <SelectItem value="powerBi">Power BI</SelectItem>
-  
-  </SelectContent>
-</Select>
-                       
-                       
-                       
+                        <Input 
+                            className={`text-sm`} 
+                            placeholder="ERP System (Optional)" 
+                            type="text" 
+                            id="erp" 
+                            name="erp" 
+                            value={erp} 
+                            onChange={(e) => setErp(e.target.value)} 
+                        />
                     </div>
+
+                    
+                 
                     
                     <div className="form-group">
                         <label>Tell us a little about your project *</label>

@@ -23,16 +23,10 @@ export default function Footer() {
     if (savedTheme === "dark") {
       setIsDarkMode(true);
       document.documentElement.classList.add("dark-theme");
-    } else if (savedTheme === "light") {
+    } else {
+      // For new users or when savedMode is 'false', use light mode
       setIsDarkMode(false);
       document.documentElement.classList.remove("dark-theme");
-    } else {
-      // If no saved preference, check system preference
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setIsDarkMode(prefersDark);
-      if (prefersDark) {
-        document.documentElement.classList.add("dark-theme");
-      }
     }
   }, []);
 
@@ -65,12 +59,13 @@ export default function Footer() {
       </button>
       </div>
 
-        <div className="mini-menu-1">
+        <div className="mini-menu-1 middle-item">
           <a href="/about"><span>About</span></a>
           <a href="/contact"><span>Contact</span></a>
           <a href="/privacy"><span>Privacy Policy</span></a>
         </div>
         
+        <div className="rightside-footer">
       <div className="mini-menu-2">
           <a href="https://www.linkedin.com/company/kis-hq/" target="__blank"><Image className="mini-menu-icon" src={Facebook} width={20} height={20} alt="logo"/></a>
           <a href="https://www.youtube.com/@BlakeEdwardsPBI" target="__blank"><Image className="mini-menu-icon" src={Ig} width={20} height={20} alt="logo"/></a>
@@ -78,7 +73,7 @@ export default function Footer() {
         <div className="logo-copyright-container">
         {/* <Image className="logo-footer" src={Logo} alt="logo"/> */}
         <span>© KeepingITSimple {new Date().getFullYear()}</span>
-      
+      </div>
       
       </div>
 

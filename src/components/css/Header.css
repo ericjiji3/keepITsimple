@@ -110,6 +110,7 @@
   }
   
   .header-main .header__button.--primary {
+    display: flex;
     background-color: #3a69e9;
     font-family: var(--avenir);
     font-weight: 500;
@@ -119,6 +120,8 @@
     /* height: fit-content;   */
     border-radius: 7px !important;
     height: 32px;
+    justify-content: center;
+    align-items: center;
   }
 
   @media (max-width: 960px) {
