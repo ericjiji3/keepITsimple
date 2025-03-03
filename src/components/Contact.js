@@ -160,7 +160,7 @@ export default function Contact(props) {
                 <form ref={form} onSubmit={sendEmail}>
                     <div className="form-group">
                         <Input 
-                            className={`${fnameErr ? "error" : ""} text-sm`} 
+                            className={`${fnameErr ? "error" : ""} text-sm form-input`} 
                             placeholder="First Name (Required)" 
                             type="text" 
                             id="fname" 
@@ -173,7 +173,7 @@ export default function Contact(props) {
                     <div className="form-group">
                         
                         <Input 
-                            className={`${lnameErr ? "error" : ""} text-sm`} 
+                            className={`${lnameErr ? "error" : ""} text-sm form-input`} 
                             placeholder="Last Name (Required)" 
                             type="text" 
                             id="lname" 
@@ -185,7 +185,7 @@ export default function Contact(props) {
                     
                     <div className="form-group">
                         <Input 
-                            className={`${emailErr ? "error" : ""} text-sm`} 
+                            className={`${emailErr ? "error" : ""} text-sm form-input`} 
                             placeholder="Email (Required)" 
                             type="text" 
                             id="email" 
@@ -197,7 +197,7 @@ export default function Contact(props) {
 
                     <div className="form-group">
                         <Input 
-                            className={`text-sm`} 
+                            className={`text-sm form-input`} 
                             placeholder="ERP System (Optional)" 
                             type="text" 
                             id="erp" 
@@ -213,7 +213,7 @@ export default function Contact(props) {
                     <div className="form-group">
                         <label>Tell us a little about your project *</label>
                         <textarea 
-                        className="flex w-full rounded-md border border-input bg-transparent px-3 py-1 shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-sm"
+                        className="flex w-full rounded-md border border-input bg-transparent px-3 py-1 shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-sm form-input textarea-contact"
                             name="comments" 
                             id="comments" 
                             value={message} 

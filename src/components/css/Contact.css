@@ -51,6 +51,8 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
 }
 
 /* Left side - Team section */
@@ -132,7 +134,7 @@
 .contact-form-section {
   flex: 1;
   padding: 40px;
-  background-color: white;
+  background-color: var(--container-background);
 }
 
 .form-group {
@@ -225,7 +227,7 @@ select::-ms-expand {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   select {
     padding: 12px;
     font-size: 0.9rem;
@@ -413,4 +415,19 @@ label {
     bottom: -50px;
     right: -50px;
   }
+}
+
+.form-group label{
+  color: var(--foreground);
+}
+
+.form-input{
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--foreground);
+}
+
+.textarea-contact{
+height: 10rem;
+resize: none;
 }
