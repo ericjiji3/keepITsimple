@@ -50,12 +50,26 @@
     height: 32px;
     width: auto;
   }
+  
+  
+  .logo-image-h2 {
+    height: 24px;
+    width: auto;
+  }
+
+  .logo-image-h2 {
+    filter: var(--reverse-invert);
+  }
 
   @media (max-width: 960px) {
     .header-main .logo-image {
       height: 28px;
       width: auto;
       margin-left: 0.6rem;
+    }
+    .header-main .logo-image-h2 {
+      height: 28px;
+      width: auto;
     }
   }
   

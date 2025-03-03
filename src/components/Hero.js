@@ -53,6 +53,7 @@ export default function Home(props){
     }, [])
     return(
         <div className="hero-section" id="hero-section">
+            <div className="hero-grid-background"></div>
             <div className="hero-top-half">
                 <div className="hero-content">
                     <div className="hero-textbox">

@@ -6,6 +6,8 @@
   --background-color: #F6F7FE;
   --background: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(81, 81, 81, 1) 100%);
   --background-2: radial-gradient(circle, rgb(0, 0, 0) 60%, rgb(45, 45, 45) 100%);
+  --grid-line-color: rgba(0, 0, 0, 0.2);
+  --grid-fade-color: white;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -170,7 +172,7 @@ body {
   --input: #ffffff;
   --ring: rgba(67, 97, 238, 0.3);
   --radius: 7px;
-  --invert: 1;
+  --invert: invert(1);
   --reverse-invert: invert(0);
 }
 
@@ -191,8 +193,10 @@ body {
   --faq-border: #3c3c3c;
   --input: #1e1e1e;
   --ring: rgba(129, 140, 248, 0.3);
-  --invert: 0;
+  --invert: invert(0);
   --reverse-invert: invert(1);
+  --grid-line-color: rgba(255, 255, 255, 0.2);
+  --grid-fade-color: var(--background);
 }
 
 /* Apply theme variables to elements */

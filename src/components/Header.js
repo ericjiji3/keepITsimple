@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Logo from "../components/images/kislogo.png";
+import LogoH1 from "../components/images/kislogoh1.png";
+import LogoH2 from "../components/images/kislogoh2.png";
 import Image from "next/image";
 import Hamburger from 'hamburger-react';
 import { Button } from "@/components/ui/button";
@@ -53,9 +55,14 @@ export default function Header(){
         <div className="header-main" aria-label="Login or Schedule a Demo">
               <a className="__logo" href="#">
                 <Image 
-                  src={Logo}
+                  src={LogoH1}
                   alt="Logo"
                   className="logo-image"
+                />
+                <Image 
+                  src={LogoH2}
+                  alt="Logo"
+                  className="logo-image-h2"
                 />
               </a>
 
