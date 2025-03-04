@@ -24,7 +24,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50vw;
+  /* width: 50vw; */
 }
 
 .testimonials-main-content-text{
@@ -92,6 +92,7 @@
 @media (max-width: 960px) {
   .testimonials-main h1 {
     width: 100%;
+    font-size: 1.3rem;
   }
 }
 
@@ -105,6 +106,7 @@
 @media (max-width: 960px) {
   .testimonials-main h2 {
     width: 100%;
+    font-size: 0.9rem;
   }
 }
 
@@ -174,7 +176,7 @@
 
 @media (max-width: 960px) {
   .testimonial-card {
-    width: 80vw;
+    width: 70vw;
   }
 }
 

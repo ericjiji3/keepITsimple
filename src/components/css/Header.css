@@ -71,14 +71,14 @@
   
   @media (max-width: 1500px) {
     .header-parent {
-      width: 78vw;
+      width: 100vw;
     }
   }
   
   
   @media (max-width: 960px) {
     .header-parent {
-      width: 80vw;
+      width: 100vw;
     }
   }
 

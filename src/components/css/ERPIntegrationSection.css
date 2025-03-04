@@ -82,8 +82,49 @@
   align-items: flex-start;
   justify-content: center;
   text-align: left;
-  width: 20vw;
+  width: 4vw;
 }
+
+
+
+@media (max-width: 7000px) {
+  .erp-integration-section-text {
+    width: 8vw;
+  }
+}
+
+@media (max-width: 5000px) {
+  .erp-integration-section-text {
+    width: 9vw;
+  }
+}
+
+@media (max-width: 4000px) {
+  .erp-integration-section-text {
+    width: 10vw;
+  }
+}
+
+  @media (max-width: 3000px) {
+  .erp-integration-section-text {
+    width: 18vw;
+  }
+}
+
+@media (max-width: 2000px) {
+  .erp-integration-section-text {
+    width: 25vw;
+  }
+}
+
+@media (max-width: 1500px) {
+  .erp-integration-section-text {
+    width: 40vw;
+  }
+}
+
+
+
 
 @media (max-width: 960px) {
   .erp-integration-section-text {
@@ -101,7 +142,7 @@
 .erp-integration-section p {
   font-size: 1rem;
   color: var(--muted-foreground);
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 .erp-integration-section .highlight {
@@ -116,9 +157,58 @@
   align-items: center;
   gap: 0.5rem; /* Space between logos */
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  width: 15vw;
+  width: 5vw;
   /* height: 10rem; */
 }
+
+
+
+
+@media (max-width: 7000px) {
+  .integration-logos {
+    width: 5vw;
+  }
+}
+
+@media (max-width: 5000px) {
+  .integration-logos {
+    width: 8vw;
+  }
+}
+
+@media (max-width: 4000px) {
+  .integration-logos {
+    width: 10vw;
+  }
+}
+
+  @media (max-width: 3000px) {
+  .integration-logos {
+    width: 14vw;
+  }
+}
+
+@media (max-width: 2000px) {
+  .integration-logos {
+    width: 20vw;
+  }
+}
+
+@media (max-width: 1500px) {
+  .integration-logos {
+    width: 29vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 960px) {
   .integration-logos {
