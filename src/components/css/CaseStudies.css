@@ -20,8 +20,47 @@
     margin-bottom: 2rem;
     justify-content: center;
     align-items: flex-start;
-    width: 50vw;
+    width: 10vw;
 } 
+
+
+
+@media (max-width: 7000px) {
+  .case-studies-top-container {
+    width: 14vw;
+  } 
+}
+
+@media (max-width: 5000px) {
+  .case-studies-top-container {
+    width: 18vw;
+  }
+}
+
+@media (max-width: 4000px) {
+  .case-studies-top-container {
+    width: 23vw;
+  }
+}
+
+@media (max-width: 3000px) {
+  .case-studies-top-container {
+    width: 37vw;
+  }
+}
+
+@media (max-width: 2000px) {
+  .case-studies-top-container {
+    width: 42vw;
+  }
+}
+
+@media (max-width: 1500px) {
+  .case-studies-top-container {
+    width: 78vw;
+  }
+}
+
 
 @media (max-width: 960px) {
   .case-studies-top-container {

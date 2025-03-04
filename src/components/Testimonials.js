@@ -34,8 +34,10 @@ export default function Testimonials(props) {
   return (
     <div className="testimonials-main">
       <div className="testimonials-main-content">
+      <div className="testimonials-main-content-text">
       <h1>What our clients are saying</h1>
       <h2>Hear how we used Power BI to revolutionise their business</h2>
+      </div>
       <div className="testimonials-container">
         {props.testimonialsContent.fields.testimonials.map((testimonial, index) => (
           <motion.div

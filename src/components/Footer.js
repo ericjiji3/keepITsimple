@@ -16,6 +16,7 @@ export default function Footer() {
 
   return (
     <div className="footer-main">
+      <div className="footer-parent">
 
         <div className="mini-menu-1 middle-item">
           <a href="/about"><span>About</span></a>
@@ -23,19 +24,21 @@ export default function Footer() {
           <a href="/privacy"><span>Privacy Policy</span></a>
         </div>
         
-        <div className="rightside-footer">
-      <div className="mini-menu-2">
+
+        <div className="mini-menu-2">
           <a href="https://www.linkedin.com/company/kis-hq/" target="__blank"><Image className="mini-menu-icon" src={Facebook} width={20} height={20} alt="logo"/></a>
           <a href="https://www.youtube.com/@BlakeEdwardsPBI" target="__blank"><Image className="mini-menu-icon" src={Ig} width={20} height={20} alt="logo"/></a>
         </div>
+
+
+
+   
         <div className="logo-copyright-container">
         {/* <Image className="logo-footer" src={Logo} alt="logo"/> */}
         <span>© KeepingITSimple {new Date().getFullYear()}</span>
-      </div>
       
       </div>
-
-      
+      </div>
     </div>
   );
 }

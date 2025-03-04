@@ -23,14 +23,59 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 50vw;
+    width: 10vw;
 }
+
+
+@media (max-width: 7000px) {
+  .faq-content {
+    width: 14vw;
+  } 
+}
+
+@media (max-width: 5000px) {
+  .faq-content {
+    width: 18vw;
+  }
+}
+
+@media (max-width: 4000px) {
+  .faq-content {
+    width: 23vw;
+  }
+}
+
+@media (max-width: 3000px) {
+  .faq-content {
+    width: 37vw;
+  }
+}
+
+@media (max-width: 2000px) {
+  .faq-content {
+    width: 42vw;
+  }
+}
+
+@media (max-width: 1500px) {
+  .faq-content {
+    width: 78vw;
+  }
+}
+
 
 @media (max-width: 960px) {
   .faq-content {
     width: 80vw;
   }
 }
+
+
+
+
+
+
+
 
 .faq-top-container{
     display: flex;
