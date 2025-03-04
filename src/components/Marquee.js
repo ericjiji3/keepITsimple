@@ -1,6 +1,5 @@
 "use client";
 import "./css/Marquee.css";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Image1 from "../components/images/partners/image1.png";
 import Image2 from "../components/images/partners/image2.png";
@@ -19,46 +18,28 @@ function PartnersMarquee() {
     { src: Image6, alt: "Partner 6" },
   ];
 
+  // Create multiple copies to ensure seamless looping
+  const allImageGroups = Array(4).fill().map((_, groupIndex) => (
+    <div key={`group-${groupIndex}`} className="partners-image-group">
+      {partnerImages.map((image, imageIndex) => (
+        <div key={`img-${groupIndex}-${imageIndex}`} className="partner-image-wrapper">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={150}
+            height={80}
+            className="partner-image"
+          />
+        </div>
+      ))}
+    </div>
+  ));
+
   return (
     <div className="partners-marquee-container">
-      <motion.div
-        className="partners-marquee-track"
-        animate={{
-          x: ["0%", "-50%"]
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      >
-        <div className="partners-image-group">
-          {partnerImages.map((image, index) => (
-            <div key={index} className="partner-image-wrapper">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={150}
-                height={80}
-                className="partner-image"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="partners-image-group">
-          {partnerImages.map((image, index) => (
-            <div key={`duplicate-${index}`} className="partner-image-wrapper">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={150}
-                height={80}
-                className="partner-image"
-              />
-            </div>
-          ))}
-        </div>
-      </motion.div>
+      <div className="partners-marquee-inner">
+        {allImageGroups}
+      </div>
     </div>
   );
 }
