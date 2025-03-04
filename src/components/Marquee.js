@@ -1,13 +1,13 @@
 "use client";
-import "./css/Partners.css";
+import "./css/Marquee.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Image1 from "../components/images/partners/image 1.png";
-import Image2 from "../components/images/partners/image 2.png";
-import Image3 from "../components/images/partners/image 3.png";
-import Image4 from "../components/images/partners/image 4.png";
-import Image5 from "../components/images/partners/image 5.png";
-import Image6 from "../components/images/partners/image 6.png";
+import Image1 from "../components/images/partners/image1.png";
+import Image2 from "../components/images/partners/image2.png";
+import Image3 from "../components/images/partners/image3.png";
+import Image4 from "../components/images/partners/image4.png";
+import Image5 from "../components/images/partners/image5.png";
+import Image6 from "../components/images/partners/image6.png";
 
 function PartnersMarquee() {
   const partnerImages = [

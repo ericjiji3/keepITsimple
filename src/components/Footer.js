@@ -12,52 +12,10 @@ import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
 
 export default function Footer() {
-  // Initialize state from localStorage if available, otherwise default to light mode
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  
-  // On initial load, check system preference and localStorage
-  useEffect(() => {
-    // Check if user has a saved preference
-    const savedTheme = localStorage.getItem("theme");
-    
-    if (savedTheme === "dark") {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark-theme");
-    } else {
-      // For new users or when savedMode is 'false', use light mode
-      setIsDarkMode(false);
-      document.documentElement.classList.remove("dark-theme");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newDarkMode = !isDarkMode;
-    setIsDarkMode(newDarkMode);
-    
-    // Update DOM and localStorage
-    if (newDarkMode) {
-      document.documentElement.classList.add("dark-theme");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark-theme");
-      localStorage.setItem("theme", "light");
-    }
-  };
+ 
 
   return (
     <div className="footer-main">
-<div className="theme-toggle-container">
-      <button 
-        onClick={toggleTheme}
-        className="theme-toggle-btn"
-        aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-      >
-        <div className="icon-container">
-          <Sun className={`moon-icon ${isDarkMode ? "hidden" : "visible"}`} />
-          <Moon className={`moon-icon ${isDarkMode ? "visible" : "hidden"}`} />
-        </div>
-      </button>
-      </div>
 
         <div className="mini-menu-1 middle-item">
           <a href="/about"><span>About</span></a>

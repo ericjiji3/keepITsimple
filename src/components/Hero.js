@@ -15,6 +15,8 @@ import Image4 from "../components/images/partners/image4.png";
 import Image5 from "../components/images/partners/image5.png";
 import Image6 from "../components/images/partners/image6.png";
 
+import Marquee from "./Marquee";
+
 const partnerImages = [
   { src: Image1, alt: "Partner 1" },
   { src: Image2, alt: "Partner 2" },
@@ -76,7 +78,10 @@ export default function Home(props){
                 
                 </div>
                 <div className="hero-bottom-half">
-                    <div className="partners-image-group">
+                    {/* <
+                        
+                        
+                        div className="partners-image-group">
         {partnerImages.map((image, index) => (
           <div key={index} className="partner-image-wrapper">
             <Image
@@ -88,7 +93,9 @@ export default function Home(props){
             />
                         </div>
                         ))}
-                    </div>
+                    </div> */}
+
+                    <Marquee />
                     </div>
         </div>
     )
