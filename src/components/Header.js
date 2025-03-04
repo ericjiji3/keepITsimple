@@ -91,6 +91,7 @@ export default function Header(){
 
     return(
         <div className="header-main" aria-label="Login or Schedule a Demo">
+          <div className="header-parent">
               <a className="__logo" href="/">
                 <Image 
                   src={LogoH1}
@@ -179,7 +180,7 @@ export default function Header(){
                   </NavigationMenu>
                 </div>
               </div>
-
+            </div>
              
         </div>
     )

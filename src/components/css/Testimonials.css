@@ -27,12 +27,6 @@
   width: 50vw;
 }
 
-@media (max-width: 960px) {
-  .testimonials-main-content {
-    width: 80vw;
-  }
-}
-
 .testimonials-main-content-text{
   display: flex;
   flex-direction: column;
@@ -68,7 +62,7 @@
 
 @media (max-width: 2000px) {
   .testimonials-main-content-text {
-    width: 42vw;
+    width: 50vw;
   }
 }
 
