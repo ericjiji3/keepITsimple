@@ -42,8 +42,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  padding-right: 4rem;
+  gap: 6rem;
+  padding-right: 6rem;
   width: fit-content;
 }
 
@@ -57,6 +57,12 @@
 .partner-image-wrapper {
   flex: 0 0 auto;
   width: 90px;
+}
+
+@media (min-width: 3000px) {
+  .partner-image-wrapper {
+    width: 120px;
+  }
 }
 
 .partner-image {

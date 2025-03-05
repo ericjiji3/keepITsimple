@@ -39,19 +39,19 @@
 
 @media (max-width: 4000px) {
   .case-studies-top-container {
-    width: 23vw;
+    width: 40vw;
   }
 }
 
 @media (max-width: 3000px) {
   .case-studies-top-container {
-    width: 37vw;
+    width: 50vw;
   }
 }
 
 @media (max-width: 2000px) {
   .case-studies-top-container {
-    width: 50vw;
+    width: 65vw;
   }
 }
 
@@ -73,15 +73,16 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin-bottom: 1rem;
 } 
 
 .case-studies-top-text h1{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
 } 
 
 .case-studies-top-text h2{
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #5d5d5d;
     text-align: left;
 }
@@ -89,6 +90,15 @@
 @media (max-width: 960px) {
   .case-studies-top-text h2 {
    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 3000px) and (max-width: 4000px) {
+  .case-studies-top-text h1 {
+    font-size: 2.5rem;
+  }
+  .case-studies-top-text h2 {
+    font-size: 1.8rem;
   }
 }
 
@@ -117,19 +127,19 @@
 
 @media (max-width: 4000px) {
   .case-studies-bottom-container {
-    width: 23vw;
+    width: 30vw;
   }
 }
 
 @media (max-width: 3000px) {
   .case-studies-bottom-container {
-    width: 37vw;
+    width: 50vw;
   }
 }
 
 @media (max-width: 2000px) {
   .case-studies-bottom-container {
-    width: 50vw;
+    width: 65vw;
   }
 }
 
@@ -158,7 +168,8 @@
   border: 1px solid var(--border);
   box-shadow: var(--container-shadow);
   overflow: hidden; /* Round corners */
-  width: 250px; /* Fixed width for cards */
+  width: 350px; /* Fixed width for cards */
+  height: 500px;
   text-align: left; /* Align text to the left */
 }
 
@@ -179,7 +190,7 @@
 }
 
 .case-studies-image-wrapper h3{
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     color: var(--foreground);
     font-weight: 600;
     width: 100%;
@@ -188,13 +199,13 @@
 
 .case-studies-image-wrapper p {
   color: var(--muted-foreground);
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   width: 100%;
   padding: 0 1rem 0.5rem 1.5rem;
 }
 
 .case-studies-image-wrapper .case-study-button {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   background: none;
   color: var(--accent); /* Button text color */
   border: none; /* Remove border */

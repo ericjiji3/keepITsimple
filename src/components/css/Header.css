@@ -53,19 +53,19 @@
   
   @media (max-width: 4000px) {
     .header-parent {
-      width: 23vw;
+      width: 40vw;
     }
   }
   
   @media (max-width: 3000px) {
     .header-parent {
-      width: 37vw;
+      width: 50vw;
     }
   }
   
   @media (max-width: 2000px) {
     .header-parent {
-      width: 50vw;
+      width: 65vw;
     }
   }
   
@@ -79,11 +79,6 @@
   @media (max-width: 960px) {
     .header-parent {
       width: 100vw;
-    }
-  }
-
-  @media (max-width: 960px) {
-    .header-parent {
       padding: 0;
       height: 48px;
     }

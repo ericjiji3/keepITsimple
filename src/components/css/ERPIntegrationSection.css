@@ -43,19 +43,19 @@
 
 @media (max-width: 4000px) {
   .erp-integration-section-content {
-    width: 23vw;
+    width: 40vw;
   }
 }
 
 @media (max-width: 3000px) {
   .erp-integration-section-content {
-    width: 37vw;
+    width: 50vw;
   }
 }
 
 @media (max-width: 2000px) {
   .erp-integration-section-content {
-    width: 50vw;
+    width: 65vw;
   }
 }
 
@@ -101,19 +101,19 @@
 
 @media (max-width: 4000px) {
   .erp-integration-section-text {
-    width: 10vw;
+    width: 20vw;
   }
 }
 
   @media (max-width: 3000px) {
   .erp-integration-section-text {
-    width: 18vw;
+    width: 25vw;
   }
 }
 
 @media (max-width: 2000px) {
   .erp-integration-section-text {
-    width: 25vw;
+    width: 35vw;
   }
 }
 
@@ -134,15 +134,27 @@
 
 .erp-integration-section h2 {
   color: var(--foreground);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
+@media (min-width: 3000px) and (max-width: 4000px) {
+  .erp-integration-section h2 {
+    font-size: 2.5rem;
+  }
+}
+
 .erp-integration-section p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--muted-foreground);
   /* margin-bottom: 2rem; */
+}
+
+@media (min-width: 3000px) and (max-width: 4000px) {
+  .erp-integration-section p {
+    font-size: 2rem;
+  }
 }
 
 .erp-integration-section .highlight {
@@ -178,19 +190,19 @@
 
 @media (max-width: 4000px) {
   .integration-logos {
-    width: 10vw;
+    width: 15vw;
   }
 }
 
   @media (max-width: 3000px) {
   .integration-logos {
-    width: 14vw;
+    width: 20vw;
   }
 }
 
 @media (max-width: 2000px) {
   .integration-logos {
-    width: 20vw;
+    width: 25vw;
   }
 }
 

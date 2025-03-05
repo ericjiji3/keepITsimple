@@ -63,7 +63,7 @@ export default function Home(props){
                         <div className="hero-subheader" dangerouslySetInnerHTML={{ __html: subheading }} /> 
                     </div>
                     <a href="#contact" className="hero-button">
-                        Book a free demo
+                        Book a Demo
                     </a>
                 </div>
                 <div className='hero-image-container'>

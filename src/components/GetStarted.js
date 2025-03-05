@@ -22,7 +22,7 @@ export default function GetStarted() {
           <p>You read that right... completely free. No lock in contract.</p>
       </div>
       <div className="get-started-button-container">
-        <a href="/contact" className="get-started-button">Get Started</a>
+        <a href="/contact" className="get-started-button">Book a Demo</a>
       </div>
       </div>
     </div>

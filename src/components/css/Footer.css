@@ -34,19 +34,19 @@
 
 @media (max-width: 4000px) {
   .footer-parent {
-    width: 23vw;
+    width: 40vw;
   }
 }
 
   @media (max-width: 3000px) {
   .footer-parent {
-    width: 37vw;
+    width: 50vw;
   }
 }
 
 @media (max-width: 2000px) {
   .footer-parent {
-    width: 50vw;
+    width: 65vw;
   }
 }
 
