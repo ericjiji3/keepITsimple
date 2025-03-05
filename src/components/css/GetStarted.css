@@ -66,6 +66,8 @@
 @media (max-width: 960px) {
   .get-started-section-parent {
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 80vw;
     gap: 1rem;
   }
@@ -86,7 +88,8 @@
 
 @media (max-width: 960px) {
   .get-started-section h2 {
-    text-align: center;
+    text-align: left;
+    font-size: 1.6rem;
   }
 }
 
@@ -104,7 +107,8 @@
 
 @media (max-width: 960px) {
   .get-started-section p {
-    text-align: center;
+    text-align: left;
+    font-size: 1rem;
   }
 } 
 
@@ -182,4 +186,9 @@
   text-align: center;
   width: fit-content;
   white-space: nowrap;
+}
+@media (max-width: 960px) {
+  .get-started-button {
+    font-size: 1rem;
+  }
 }

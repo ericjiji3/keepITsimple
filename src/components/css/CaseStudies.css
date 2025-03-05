@@ -73,13 +73,19 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 } 
 
 .case-studies-top-text h1{
     font-size: 2rem;
     font-weight: 600;
 } 
+
+@media (max-width: 960px) {
+  .case-studies-top-text h1 {
+    font-size: 1.2rem;
+  }
+}
 
 .case-studies-top-text h2{
     font-size: 1.5rem;
@@ -89,6 +95,7 @@
 
 @media (max-width: 960px) {
   .case-studies-top-text h2 {
+    font-size: 0.8rem;
    margin-bottom: 0;
   }
 }
@@ -175,7 +182,7 @@
 
 @media (max-width: 960px) {
   .case-studies-image-group {
-    width: 70vw;
+    width: 80vw;
   }
 }
 

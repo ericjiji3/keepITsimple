@@ -17,7 +17,7 @@
     -webkit-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
     font-size: 16px;
-    padding: 0.75em 0.75em;
+    padding: 0em 0em;
     /* margin-bottom: 16px !important; */
     z-index: 9001;
     position: fixed;

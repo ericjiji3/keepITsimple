@@ -53,6 +53,9 @@ export default function Home(props){
         console.log(subhead);
         setSubheading(subhead);
     }, [])
+
+
+    
     return(
         <div className="hero-section" id="hero-section">
             <div className="hero-grid-background"></div>

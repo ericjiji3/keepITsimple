@@ -94,6 +94,7 @@
 @media (max-width: 960px) {
   .faq-top-container h2 {
     font-size: 1.2rem;
+    margin-bottom: 0rem;
   }
 }
 
@@ -107,6 +108,12 @@
     font-size: 1rem;
     color: #5d5d5d;
     margin-bottom: 2rem;
+}
+
+@media (max-width: 960px) {
+  .faq-top-container p {
+    font-size: 0.8rem;
+  }
 }
 
 .accordion-trigger {
@@ -158,3 +165,19 @@
   }
 }
 
+
+@media (max-width: 960px) {
+  .faq-color-1 {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .faq-color-2 {
+    font-size: 0.8rem;
+  }
+
+  .faq-color-3 {
+    font-size: 0.8rem;
+  }
+  
+}

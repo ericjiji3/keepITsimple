@@ -59,7 +59,7 @@
   width: 90px;
 }
 
-@media (min-width: 3000px) {
+@media (min-width: 3000px) and (max-width: 4000px) {
   .partner-image-wrapper {
     width: 120px;
   }

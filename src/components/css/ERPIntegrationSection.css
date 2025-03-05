@@ -73,6 +73,7 @@
     flex-direction: column;
     align-items: center;
     width: 80vw;
+    gap: 2rem;
   }
 }
 
@@ -145,10 +146,23 @@
   }
 }
 
+@media (max-width: 960px) {
+  .erp-integration-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
 .erp-integration-section p {
   font-size: 1.5rem;
   color: var(--muted-foreground);
   /* margin-bottom: 2rem; */
+}
+
+@media (max-width: 960px) {
+  .erp-integration-section p {
+    font-size: 0.8rem;
+  }
 }
 
 @media (min-width: 3000px) and (max-width: 4000px) {
