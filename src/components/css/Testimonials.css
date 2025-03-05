@@ -183,7 +183,7 @@
   border-radius: 8px;
   padding: 0rem;
   text-align: center;
-  width: 20rem; /* Adjust width as needed */
+  width: 18rem; /* Adjust width as needed */
   box-shadow: none;
 }
 
@@ -192,6 +192,20 @@
     width: 70vw;
   }
 }
+
+@media (min-width: 1500px) {
+  .testimonial-card {
+    width: 20rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .testimonial-card {
+    width: 25rem;
+  }
+}
+
+
 
 .testimonial-top-container{ 
     display: flex;
@@ -257,7 +271,7 @@
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 2.5rem;
+  height: 3rem;
   padding-right: 1.25rem;
 }
 

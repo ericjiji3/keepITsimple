@@ -168,8 +168,8 @@
   border: 1px solid var(--border);
   box-shadow: var(--container-shadow);
   overflow: hidden; /* Round corners */
-  width: 350px; /* Fixed width for cards */
-  height: 500px;
+  width: 250px; /* Fixed width for cards */
+  height: 400px;
   text-align: left; /* Align text to the left */
 }
 
@@ -179,6 +179,19 @@
   }
 }
 
+@media (min-width: 1500px) {
+  .case-studies-image-group {
+    width: 300px;
+    height: 450px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .case-studies-image-group {
+    width: 400px;
+    height: 500px;
+  }
+}
 
 .case-studies-image-wrapper {
   display: flex;
@@ -190,22 +203,34 @@
 }
 
 .case-studies-image-wrapper h3{
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     color: var(--foreground);
     font-weight: 600;
     width: 100%;
     padding: 1rem 2rem 0.5rem 1.5rem;
 }
 
+@media (min-width: 1500px) {
+  .case-studies-image-wrapper h3 {
+    font-size: 1.1rem;
+  }
+}
+
 .case-studies-image-wrapper p {
   color: var(--muted-foreground);
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   width: 100%;
   padding: 0 1rem 0.5rem 1.5rem;
 }
 
+@media (min-width: 1500px) {
+  .case-studies-image-wrapper p {
+    font-size: 1.1rem;
+  }
+}
+
 .case-studies-image-wrapper .case-study-button {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   background: none;
   color: var(--accent); /* Button text color */
   border: none; /* Remove border */
