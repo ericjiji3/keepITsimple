@@ -131,8 +131,18 @@
     margin: 0;
     margin: 1rem 1rem 1rem 0;
     font-size: 1.3rem;
-    line-height: 1.5;
+    line-height: 2;
     white-space: pre-line;
+}
+
+.faq-color-3{
+  color: var(--muted-foreground);
+  padding: 0;
+  margin: 0;
+  margin: 0rem 1rem 1rem 0;
+  font-size: 1.3rem;
+  line-height: 2;
+  white-space: pre-line;
 }
 
 @media (min-width: 3000px) and (max-width: 4000px) {
@@ -140,6 +150,10 @@
     font-size: 1.5rem;
   }
   .faq-color-2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-color-3 {
     font-size: 1.5rem;
   }
 }

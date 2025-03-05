@@ -21,7 +21,12 @@ const faqItems = [
   },
   {
     question: "What is your process for developing Power BI dashboards?",
-    answer: "Our process is simple and efficient.\n\n1. Initial Consultation – We sit down with you to understand your reporting requirements, the ERP system you use, and how to access your data.\n\n2. Report/Dashboard Development – We build your Power BI report or dashboard based on your needs, ensuring it delivers actionable insights.\n\n3. First Draft & Revisions – We provide a first draft for your review, making any necessary changes to ensure it aligns with your expectations.\n\n4. Final Delivery – Once approved, your Power BI dashboard is ready to use—helping you make data-driven decisions with ease.\n\nNo complicated processes, just high-quality reports tailored to your business."
+    answer: "Our process is simple and efficient.",
+    answer2: "1. Initial Consultation – We sit down with you to understand your reporting requirements, the ERP system you use, and how to access your data.",
+    answer3: "2. Report/Dashboard Development – We build your Power BI report or dashboard based on your needs, ensuring it delivers actionable insights.",
+    answer4: "3. First Draft & Revisions – We provide a first draft for your review, making any necessary changes to ensure it aligns with your expectations.",
+    answer5: "4. Final Delivery – Once approved, your Power BI dashboard is ready to use—helping you make data-driven decisions with ease.",
+    answer6: "No complicated processes, just high-quality reports tailored to your business."
   },
   {
     question: "Can you integrate data from multiple sources like ERP, CRM, and third-party tools?",
@@ -46,6 +51,11 @@ export default function FAQ() {
           <AccordionItem className="faq-color-1" key={index} value={`item-${index}`}>
             <AccordionTrigger className="flex justify-between gap-x-4 faq-color-1">{item.question}</AccordionTrigger>
             <AccordionContent className="flex faq-color-2">{item.answer}</AccordionContent>
+            {item.answer2 && <AccordionContent className="flex faq-color-3">{item.answer2}</AccordionContent>}
+            {item.answer3 && <AccordionContent className="flex faq-color-3">{item.answer3}</AccordionContent>}
+            {item.answer4 && <AccordionContent className="flex faq-color-3">{item.answer4}</AccordionContent>}
+            {item.answer5 && <AccordionContent className="flex faq-color-3">{item.answer5}</AccordionContent>}
+            {item.answer6 && <AccordionContent className="flex faq-color-3">{item.answer6}</AccordionContent>}
           </AccordionItem>
         ))}
       </Accordion>
