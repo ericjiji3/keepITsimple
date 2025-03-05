@@ -6,6 +6,7 @@ import LogoH2 from "../components/images/kislogoh2.png";
 import Image from "next/image";
 import Hamburger from 'hamburger-react';
 import { Button } from "@/components/ui/button";
+import { Moon, Sun } from "lucide-react";
 import "./css/Header.css";
 
 import {
@@ -21,6 +22,41 @@ import {
   
 
 export default function Header(){
+
+
+  // Initialize state from localStorage if available, otherwise default to light mode
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  
+  // On initial load, check system preference and localStorage
+  useEffect(() => {
+    // Check if user has a saved preference
+    const savedTheme = localStorage.getItem("theme");
+    
+    if (savedTheme === "dark") {
+      setIsDarkMode(true);
+      document.documentElement.classList.add("dark-theme");
+    } else {
+      // For new users or when savedMode is 'false', use light mode
+      setIsDarkMode(false);
+      document.documentElement.classList.remove("dark-theme");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newDarkMode = !isDarkMode;
+    setIsDarkMode(newDarkMode);
+    
+    // Update DOM and localStorage
+    if (newDarkMode) {
+      document.documentElement.classList.add("dark-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark-theme");
+      localStorage.setItem("theme", "light");
+    }
+  };
+
+
     const [isOpen, setOpen] = useState(false);
 
     const handleScroll = (e) => {
@@ -52,6 +88,7 @@ export default function Header(){
 
     return(
         <div className="header-main" aria-label="header">
+          <div className="header-parent">
               <a className="__logo" href="/">
                 <Image 
                   src={LogoH1}
@@ -90,7 +127,18 @@ export default function Header(){
               <div className="header__inner__buttons">
            
            
-
+              <div className="theme-toggle-container">
+      <button 
+        onClick={toggleTheme}
+        className="theme-toggle-btn"
+        aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+      >
+        <div className="icon-container">
+          <Sun className={`moon-icon ${isDarkMode ? "hidden" : "visible"}`} />
+          <Moon className={`moon-icon ${isDarkMode ? "visible" : "hidden"}`} />
+        </div>
+      </button>
+      </div>
               <a href="/contact" className="header__button --primary">Book a Demo</a>
 
                 
@@ -127,7 +175,7 @@ export default function Header(){
                 </div>
               </div>
 
-             
+             </div>
         </div>
     )
 }
