@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Hero1 from '../../public/hero1.gif';
-import Hero2 from '../../public/hero2.gif';
+import Hero2 from '../../public/report.gif';
 import Hero3 from '../../public/hero3.gif';
 
 import "./css/Hero.css";
@@ -65,7 +65,7 @@ export default function Home(props){
                         <div className="hero-header" dangerouslySetInnerHTML={{ __html: heading }} />
                         <div className="hero-subheader" dangerouslySetInnerHTML={{ __html: subheading }} /> 
                     </div>
-                    <a href="#contact" className="hero-button">
+                    <a href="/contact" className="hero-button">
                         Book a Demo
                     </a>
                 </div>

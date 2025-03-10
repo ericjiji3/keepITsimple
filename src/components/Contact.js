@@ -161,7 +161,7 @@ export default function Contact(props) {
                     <div className="form-group">
                         <Input 
                             className={`${fnameErr ? "error" : ""} text-sm form-input`} 
-                            placeholder="First Name (Required)" 
+                            placeholder="First Name*" 
                             type="text" 
                             id="fname" 
                             name="fname" 
@@ -174,7 +174,7 @@ export default function Contact(props) {
                         
                         <Input 
                             className={`${lnameErr ? "error" : ""} text-sm form-input`} 
-                            placeholder="Last Name (Required)" 
+                            placeholder="Last Name*" 
                             type="text" 
                             id="lname" 
                             name="lname" 
@@ -186,7 +186,7 @@ export default function Contact(props) {
                     <div className="form-group">
                         <Input 
                             className={`${emailErr ? "error" : ""} text-sm form-input`} 
-                            placeholder="Email (Required)" 
+                            placeholder="Email*" 
                             type="text" 
                             id="email" 
                             name="email" 
@@ -211,7 +211,7 @@ export default function Contact(props) {
                  
                     
                     <div className="form-group">
-                        <label>Tell us a little about your project *</label>
+                        <label  className="text-sm">Tell us a little about your project*</label>
                         <textarea 
                         className="flex w-full rounded-md border border-input bg-transparent px-3 py-1 shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-sm form-input textarea-contact"
                             name="comments" 
@@ -230,6 +230,7 @@ export default function Contact(props) {
                     </button>
                     
                     <span className={`status-message ${status}`}>{result}</span>
+                    <p className="text-sm">*Required fields</p>
                 </form>
             </div>
         </div>

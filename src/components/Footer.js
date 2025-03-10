@@ -35,7 +35,7 @@ export default function Footer() {
    
         <div className="logo-copyright-container">
         {/* <Image className="logo-footer" src={Logo} alt="logo"/> */}
-        <span>© KeepingITSimple {new Date().getFullYear()}</span>
+        <span>© KeepingItSimple {new Date().getFullYear()}</span>
       
       </div>
       </div>

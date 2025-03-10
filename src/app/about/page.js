@@ -30,7 +30,7 @@ export default async function App() {
                     </div>
                     <div className="about-profile-text">
                         <h2 className="about-profile-name">Blake Edwards</h2>
-                        <p className="about-profile-title">Founder of KeepingITSimple</p>
+                        <p className="about-profile-title">Founder of KeepingItSimple</p>
                     </div>
                 </div>
                 </div>
