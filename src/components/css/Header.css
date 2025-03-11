@@ -24,6 +24,12 @@
     /* height: fit-content; */
   }
 
+  @media (max-width: 960px) {
+    .header-main {
+      padding: 0.5rem 0.5rem;
+    }
+  }
+
   .header-parent{
     width: 100vw;
     line-height: 1.2;

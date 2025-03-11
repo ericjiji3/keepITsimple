@@ -4,7 +4,7 @@ import "./globals.css";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "KeepingITSimple",
+  title: "KeepingItSimple",
   description: "Discover How Automation can Revolutionize Your Business",
 
 };
