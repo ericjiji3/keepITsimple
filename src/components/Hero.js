@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Hero1 from '../../public/hero1.gif';
-import Hero2 from '../../public/report.gif';
+import xHero2 from '../../public/reportloop.gif';
 import Hero3 from '../../public/hero3.gif';
 
 import "./css/Hero.css";
@@ -73,7 +73,7 @@ export default function Home(props){
                     <div className='hero-image-box'>
                         <Image className='hero-image bottom' alt="hero1" src={Hero1}/>
                         <Image className='hero-image middle' alt="hero3" src={Hero3}/>
-                        <Image className='hero-image top' alt="hero2" src={Hero2}/>
+                        <Image className='hero-image top' alt="xhero2" src={xHero2}/>
 
                     </div>
 
@@ -100,6 +100,7 @@ export default function Home(props){
 
                     <Marquee />
                     </div>
+                
         </div>
     )
 }

@@ -14,7 +14,8 @@ export default function MicrosoftBIHome(props){
         setWidth(window.innerWidth);
     }, [])
 
-    useEffect(() => {
+    useEffect(() => { 
+        
         const resize = () => {
             setWidth(window.innerWidth);
         };
