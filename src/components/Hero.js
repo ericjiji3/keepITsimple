@@ -14,6 +14,8 @@ import Image3 from "../components/images/partners/image3.png";
 import Image4 from "../components/images/partners/image4.png";
 import Image5 from "../components/images/partners/image5.png";
 import Image6 from "../components/images/partners/image6.png";
+import Image7 from "../components/images/partners/image7.png";
+import Image8 from "../components/images/partners/image8.png";
 
 import Marquee from "./Marquee";
 
@@ -24,6 +26,9 @@ const partnerImages = [
   { src: Image4, alt: "Partner 4" },
   { src: Image5, alt: "Partner 5" },
   { src: Image6, alt: "Partner 6" },
+  { src: Image7, alt: "Partner 7" },
+  { src: Image8, alt: "Partner 8" },
+  
 ];
 
 

@@ -79,9 +79,9 @@
 } */
 
 /* Optional: Pause on hover */
-.partners-marquee-container:hover .partners-marquee-inner {
+/* .partners-marquee-container:hover .partners-marquee-inner {
   animation-play-state: paused;
-}
+} */
 /* 
 @media (max-width: 960px) {
   .partners-marquee-inner {
