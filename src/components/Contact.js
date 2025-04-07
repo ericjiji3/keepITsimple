@@ -84,6 +84,11 @@ export default function Contact(props) {
                 .then((result) => {
                     setStatus('success');
                     setResult('✅ Message Sent');
+                    setFirst("");
+                    setLast("");
+                    setEmail("");
+                    setMessage("");
+                    setErp("");
                     e.target.reset();
                 }, (error) => {
                     setStatus('fail');
