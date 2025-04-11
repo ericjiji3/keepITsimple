@@ -77,6 +77,7 @@ export default function Contact(props) {
             'lname': last,
             'email': email,
             'comments': message,
+            'erp': erp,
         };
 
         if (validateFields(data)) {
